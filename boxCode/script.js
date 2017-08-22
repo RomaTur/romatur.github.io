@@ -1,7 +1,14 @@
 (function(box, $, undefined) {
 
+        if($(window).width()>='1025'){
     var letterWidth = 3;
-
+}
+if($(window).width()<='1024'){
+var letterWidth = 2;
+}
+if($(window).width()<='414'){
+var letterWidth = 1;
+}
     box.templates = {
         linenum: function(num) {
             return '<span class="linenum editing" id="num-{{num}}">{{num}}</span>'.replace(/\{\{num\}\}/g, num);
@@ -48,8 +55,8 @@
     box.currentLine = new Line();
     box.prev = null;
     box.depth = 0;
-    box.maxLines = Math.ceil($(window).width() / 55);
-    $(document).on('resize', function() {box.maxLines = Math.ceil($(window).width() / 55);});
+    box.maxLines = Math.ceil($('.editorCode').width() / 11);
+    $(document).on('resize', function() {box.maxLines = Math.ceil($('.editorCode').width() / 11);});
 
     box.init = function() {
 
