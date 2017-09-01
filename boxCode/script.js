@@ -1,9 +1,9 @@
 (function(box, $, undefined) {
 
-        if($(window).width()>='1025'){
+        if($(window).width()>='1024'){
     var letterWidth = 3;
 }
-if($(window).width()<='1024'){
+if($(window).width()<='1023'){
 var letterWidth = 2;
 }
 if($(window).width()<='414'){
@@ -55,8 +55,8 @@ var letterWidth = 1;
     box.currentLine = new Line();
     box.prev = null;
     box.depth = 0;
-    box.maxLines = Math.ceil($('.editorCode').width() / 11);
-    $(document).on('resize', function() {box.maxLines = Math.ceil($('.editorCode').width() / 11);});
+    box.maxLines = Math.ceil($('.editorCode').width() / 10.5);
+    $(document).on('resize', function() {box.maxLines = Math.ceil($('.editorCode').width() / 10.5);});
 
     box.init = function() {
 
