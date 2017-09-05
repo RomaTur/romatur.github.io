@@ -3,7 +3,7 @@
         if($(window).width()>='1024'){
     var letterWidth = 3;
 }
-if($(window).width()<='1023'){
+if('415'<= $(window).width()<='1023'){
 var letterWidth = 2;
 }
 if($(window).width()<='414'){
