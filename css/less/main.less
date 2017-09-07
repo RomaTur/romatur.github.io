@@ -257,9 +257,20 @@ html {
             font-style: italic;
         }
     }
+
+    p:last-of-type {
+        background-color: rgb(231, 231, 231);
+        padding: 30px;
+        margin-left: 30px;
+        margin-top: 30px;
+        height: 300px;
+        width: 80%;
+        border-left: 5px solid darken(rgb(231,231,231), 30%);
+        font-size: 30px;
+        text-align: center;
+    }
 }
 ////////////РЕЗЮМЕ////////////
-
 .resume {
     padding: 100px 5%;
     position: relative;
@@ -485,7 +496,7 @@ html {
 }
 /* ---- grid ---- */
 .grid {
-    background: #DDD;
+    // background: #DDD;
 }
 /* clear fix */
 .grid:after {
@@ -501,11 +512,41 @@ html {
 
 .grid-item {
     float: left;
-
+    padding: 2px;
     img {
         display: block;
         width: 100%;
         height: 100%;
+
+    }
+    p{
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2vw;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+
+    }
+
+
+}
+.hoverProjectsContent{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 99%;
+    height: 99%;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    &:hover{
+        background-color: rgba(0, 0, 0, 0.8);
     }
 }
 
@@ -770,6 +811,21 @@ footer {
     .projectsContent {
         width: 60%;
     }
+
+    .grid-item,
+    .grid-sizer {
+        width: 50%;
+    }
+
+    .grid-item{
+        p{
+            font-size: 3vw;
+        }
+    }
+
+    .grid-item-width2 {
+        width: 100%;
+    }
     //
     // .project {
     //     width: 100%;
@@ -983,6 +1039,11 @@ footer {
         p {
             font-size: 2.6vh;
         }
+
+        p:last-of-type {
+            width: 60%;
+            height: 200px;
+        }
     }
 
     .resumeTitle {
@@ -1060,6 +1121,20 @@ footer {
     .grid-item-width2,
     .grid-sizer {
         width: 100%;
+        padding: 0;
+    }
+
+    .grid-item{
+        p{
+            font-size: 10vw;
+        }
+    }
+
+    .hoverProjectsContent{
+
+        width: 100%;
+        height: 100%;
+
     }
 
     .contactTitle {
