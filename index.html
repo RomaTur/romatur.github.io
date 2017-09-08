@@ -1,10 +1,457 @@
-<!doctype html>
-<html>
-  <head>
-    <title>Branch:loftschool</title>
-   </head>
-   
-   <body>
-    <h1>Branch:loftschool</h1>
-   </body>
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Chrome, Firefox, Opera -->
+    <meta name="theme-color" content="#33BEE5">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#33BEE5">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Roman Turusov</title>
+    <link rel="stylesheet" href="lib/normalize.css">
+
+
+    <link rel="stylesheet" href="fonts/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="lib/jquery-3.2.1.min.js"></script>
+    <script src="lib/masonry.pkgd.min.js"></script>
+    <script src="lib/imagesloaded.pkgd.min.js"></script>
+    <!-- <script src='https://www.google.com/recaptcha/api.js'></script> -->
+
+</head>
+
+<header>
+
+
+    <div class="headBg">
+
+        <div class="head">
+            <div class="headText">
+                <h1><br>РОМАН ТУРУСОВ</h1>
+                <br><span>ПИШУ КОД И СОЗДАЮ КОНТЕНТ</span>
+
+                <br>
+
+                <br>
+                <ul>
+                    <li>
+                        <a href="https://vk.com/id_r0mashka" target="_blank"><i class="fa fa-vk" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/RoMan_111" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/RomaTur" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <i>alpha version</i>
+        </div>
+
+
+
+
+    </div>
+
+
+</header>
+
+
+<body>
+
+
+    <div class="content">
+
+        <div class="aboutMe">
+            <div class="aboutMeTitle">
+                <span>БУДЕМ<br>ЗНАКОМЫ</span>
+                <span>БУДЕМ ЗНАКОМЫ</span>
+
+                <img src="img/content/about/me.jpg" alt="">
+                <p>
+                    <br>
+
+                    <!-- ПОДСЧЕТ ЛЕТ -->
+                    Возраст:&nbsp;
+                    <script>
+                        function declOfNum(number, titles) {
+                            cases = [2, 0, 1, 1, 1, 2];
+                            return number + " " + titles[(number % 100 > 4 && number % 100 < 20) ? 2 : cases[(number % 10 < 5) ? number % 10 : 5]];
+                        }
+
+                        function birthDateToAge(b) {
+                            var n = new Date(),
+                                b = new Date(b),
+                                age = n.getFullYear() - b.getFullYear();
+                            return n.setFullYear(1972) < b.setFullYear(1972) ? age - 1 : age;
+                        }
+                        document.write(declOfNum(birthDateToAge("1994-08-08"), ['', '', '']));
+                    </script>
+                    <!-- КОНЕЦ ПОДСЧЕТА ЛЕТ -->
+                    <br>Оптимистичен&nbsp;&nbsp;<i class="fa fa-smile-o" aria-hidden="true"></i>
+                    <br>Желаю обучаться&nbsp;&nbsp;<i class="fa fa-book" aria-hidden="true"></i>
+                    <br>Люблю вкусное кофе&nbsp;&nbsp;<i class="fa fa-coffee" aria-hidden="true"></i>
+                    <br>Увлекаюсь фотографией&nbsp;&nbsp;<i class="fa fa-camera" aria-hidden="true"></i>
+                    <br>Умею работать в дедлайне&nbsp;&nbsp;<i class="fa fa-clock-o" aria-hidden="true"></i>
+                    <br>Настроен на результат&nbsp;&nbsp;<i class="fa fa-line-chart" aria-hidden="true"></i>
+
+                    <br>Больше практики&nbsp;&nbsp;<i class="fa fa-desktop" aria-hidden="true"></i>&nbsp;
+
+                </p>
+            </div>
+
+
+            <div class="aboutMeText">
+                <p>
+                    Я перспективный молодой человек, который хочет реализовать свой потенциал в любимом деле. Являясь бакалавром ВУЗа (National Research University of Electronic Technology) по специализации в области электротехники, развиваюсь в сторону WEB и Интернет вещей.
+                    Проявляю к этому немалый интерес и получаю реальное удовольствие от программирования и создания медиа контента.
+                    <br>
+                    <br>
+                    <i><q>Большинство хороших программистов делают свою работу не потому, что ожидают оплаты или признания, а потому что получают удовольствие от программирования.</q></i>
+                    <br><i>- Linus Torvalds</i>
+                    <br>
+
+                </p>
+                <p>
+                    Здесь еще будет некий контент. <br><br> Додумывать до конца стили буду. <br> Добавлю анимацию. <br> 
+                </p>
+
+            </div>
+        </div>
+
+        <div class="resume">
+
+            <div class="resumeTitle">
+                <span>ДОВЕЛОСЬ<br>ПОБЫВАТЬ</span>
+                <span>ДОВЕЛОСЬ ПОБЫВАТЬ</span>
+
+            </div>
+            <div class="resumeText">
+
+                <!-- Content-manager in Medspros.ru -->
+                <div class="work">
+
+                    <div class="workTitle">
+                        <div><i class="fa fa-list-alt" aria-hidden="true"></i></div>
+                        <span>Medspros.ru</span>
+                    </div>
+                    <p>Контент менеджер</p>
+                    <div class="workText">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum expedita aperiam eos dignissimos veniam praesentium, aut provident consequuntur distinctio, dolores, commodi amet quos accusantium, sapiente a alias vitae maiores id.
+                    </div>
+                </div>
+                <!-- Representative in Tinkoff -->
+                <div class="work">
+
+                    <div class="workTitle">
+                        <div><i class="fa fa-credit-card" aria-hidden="true"></i>
+                            <p>2016-2017</p>
+                        </div>
+                        <span>Tinkoff Bank</span>
+                    </div>
+                    <p>Представитель Банка</p>
+                    <div class="workText">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum expedita aperiam eos dignissimos veniam praesentium, aut provident consequuntur distinctio, dolores, commodi amet quos accusantium, sapiente a alias vitae maiores id.
+                    </div>
+                </div>
+                <!-- Courier in Courierist -->
+                <div class="work">
+
+                    <div class="workTitle">
+                        <div><i class="fa fa-car" aria-hidden="true"></i>
+                            <p>2016-2017</p>
+                        </div>
+                        <span>Courierist.com</span>
+                    </div>
+                    <p>Курьер</p>
+                    <div class="workText">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum expedita aperiam eos dignissimos veniam praesentium, aut provident consequuntur distinctio, dolores, commodi amet quos accusantium, sapiente a alias vitae maiores id.
+                    </div>
+                </div>
+                <!-- Software engineer in QuestDoers Team -->
+                <div class="work">
+
+                    <div class="workTitle">
+                        <div><i class="fa fa-code" aria-hidden="true"></i>
+                            <p>2016</p>
+                        </div>
+                        <span>QuestDoers Team</span>
+                    </div>
+                    <p>Инженер - программист</p>
+                    <div class="workText">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum expedita aperiam eos dignissimos veniam praesentium, aut provident consequuntur distinctio, dolores, commodi amet quos accusantium, sapiente a alias vitae maiores id.
+                    </div>
+                </div>
+
+                <!-- Developer in ЦТПО МИЭТ -->
+                <div class="work">
+
+                    <div class="workTitle">
+                        <div><i class="fa fa-code" aria-hidden="true"></i>
+                            <p>2016</p>
+                        </div>
+                        <span>ЦПТО МИЭТ</span>
+                    </div>
+                    <p>Программист</p>
+                    <div class="workText">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum expedita aperiam eos dignissimos veniam praesentium, aut provident consequuntur distinctio, dolores, commodi amet quos accusantium, sapiente a alias vitae maiores id.
+                    </div>
+                </div>
+                <!-- Media maker in Studio 402-->
+                <div class="work">
+
+                    <div class="workTitle">
+                        <div><i class="fa fa-camera" aria-hidden="true"></i>
+                            <p>2013</p>
+                        </div>
+                        <span>Studio 420</span>
+                    </div>
+                    <p>Оператор / Монтажер</p>
+                    <div class="workText">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum expedita aperiam eos dignissimos veniam praesentium, aut provident consequuntur distinctio, dolores, commodi amet quos accusantium, sapiente a alias vitae maiores id.
+                    </div>
+                </div>
+                <!-- Media maker in MIET-TV -->
+                <div class="work">
+
+                    <div class="workTitle">
+                        <div><i class="fa fa-camera" aria-hidden="true"></i>
+                            <p>2012-2013</p>
+                        </div>
+                        <span>MIET-TV</span>
+                    </div>
+                    <p>Оператор / Монтажер</p>
+                    <div class="workText lastWork">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum expedita aperiam eos dignissimos veniam praesentium, aut provident consequuntur distinctio, dolores, commodi amet quos accusantium, sapiente a alias vitae maiores id.
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+
+
+        </div>
+
+        <div class="projects">
+            <div class="projectsTitle">
+                <span>ПОДЕЛКИ</span>
+            </div>
+
+
+            <!-- <ul class="projectsContent"> -->
+            <!-- <li class="project">
+                    <div class="projectText">
+                        <p>Визуализация волнового алгоритма</p>
+                    </div>
+                    <span>
+
+                        <img src="http://via.placeholder.com/200x200">
+                    </span> -->
+            <!-- <iframe src="https://giphy.com/embed/a9d3bbcM3ImXe" width="100%" height="100%" frameBorder="0" class="giphy-embed" allowFullScreen></iframe> -->
+            <!-- <img src="img/content/projects/giphyExample.gif" alt="Пример" width="100%" height="100%"> -->
+            <!-- <img src="http://via.placeholder.com/500x150"> -->
+            <!-- <div class="videoWrapper">
+                        <iframe width="640" height="360" src="https://www.youtube.com/embed/B7_CMlUwiRI?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                    </div> -->
+            <!-- </li> -->
+
+
+
+            <div class="projectsContent">
+
+                <div class="grid">
+                    <div class="grid-sizer"></div>
+                    <div class="grid-item grid-item-width2">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg" />
+                        <div class="hoverProjectsContent">
+
+                            <p>
+                                Контент добавляется
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/submerged.jpg" />
+                        <div class="hoverProjectsContent">
+
+
+                            <p>
+                                Контент добавляется
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="videoWrapper">
+                            <iframe width="640" height="360" src="https://www.youtube.com/embed/B7_CMlUwiRI?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="hoverProjectsContent">
+
+                            <p>
+                                Контент добавляется
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/one-world-trade.jpg" />
+                        <div class="hoverProjectsContent">
+
+                            <p>
+                                Контент добавляется
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg" />
+                        <div class="hoverProjectsContent">
+
+                            <p>
+                                Контент добавляется
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg" />
+                        <div class="hoverProjectsContent">
+
+                            <p>
+                                Контент добавляется
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg" />
+                        <div class="hoverProjectsContent">
+
+                            <p>
+                                Контент добавляется
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg" />
+                        <div class="hoverProjectsContent">
+
+                            <p>
+                                Контент добавляется
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <img src="img/content/projects/giphyExample.gif" alt="Пример" width="100%" height="100%">
+                        <div class="hoverProjectsContent">
+
+                            <p>
+                                Контент добавляется
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <script type="text/javascript">
+                    // init Masonry after all images have loaded
+                    var $grid = $('.grid').imagesLoaded(function() {
+                        $grid.masonry({
+                            itemSelector: '.grid-item',
+                            percentPosition: true,
+                            columnWidth: '.grid-sizer'
+                        });
+                    });
+                </script>
+
+
+
+            </div>
+            <!-- </ul> -->
+
+
+
+
+
+        </div>
+
+    </div>
+
+    <div class="contact">
+        <div class="contactTitle">
+            <span>БУДЕМ<br>НА<br>СВЯЗИ</span>
+            <span>БУДЕМ НА СВЯЗИ</span>
+
+            <p>
+                <br> <a href="tel: +79152208197">+7-915-220-81-97</a> &nbsp <i class="fa fa-phone" aria-hidden="true"></i>
+                <br>
+                <a href="mailto:mr.romatur@gmail.com">mr.romatur@gmail.com</a> &nbsp <i class="fa fa-envelope" aria-hidden="true"></i>
+                <br>
+                <a href="https://www.google.ru/maps/place/Москва/@55.7494733,37.3523214,10z/data=!3m1!4b1!4m5!3m4!1s0x46b54afc73d4b0c9:0x3d44d6cc5757cf4c!8m2!3d55.755826!4d37.6172999" target="_blank">
+                    RUSSIA, MOSKOW</a> &nbsp <i class="fa fa-map-marker" aria-hidden="true"></i>
+            </p>
+        </div>
+
+
+        <div class="contactForm">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates voluptate quis tempora ipsum rerum veritatis ducimus consectetur consequuntur hic tenetur, nisi porro doloremque perspiciatis praesentium optio, similique enim, minima beatae.</p>
+
+            <div class="form__wrapper">
+                <form id="form-contact" method="POST" class="form-element" autocomplete="off">
+
+                    <p class="form-title">
+
+                    </p>
+                    <p class="form-message">
+
+                    </p>
+                    <input name="name" type="text" class="form-input__name" tabindex="0" placeholder="Your name" required>
+
+                    <input name="email" type="email" class="form-input__email" tabindex="0" placeholder="Your email" required>
+
+                    <textarea name="message" class="form-input__message" tabindex="0" pattern="" placeholder="Your message" required></textarea>
+
+                    <input name="theme" type="hidden" class="form-input__theme" value="Site-Portfolio">
+
+                    <div class="form-submit">
+                        <img class="g-recaptcha" src="img/reCaptcha.png" alt="">
+                        <input type="submit" class="form-input__button" value="SEND">
+
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- <div class="psdResume"><iframe src="https://drive.google.com/file/d/0B98oq7hV7oUKSmliZTZITWdLZk0/preview" width="100%" height="100%"></iframe></div> -->
+    <!-- <div class="map">
+        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1XS3Q3MGKX3vjvbMtceIwRVyBArg" width="100%" height="100%"></iframe>
+    </div> -->
+
+
+    <script src="telegramform/js/telegramform.js"></script>
+
+</body>
+<footer>
+    <div class="logoContainer">
+        <p>
+
+            © 2017 Турусов Роман.
+
+        </p>
+    </div>
+</footer>
+<script type="text/javascript" src="http://localhost:35729/livereload.js">
+</script>
+
+
+
+<!-- Google map Api
+AIzaSyD6xBDCdGg70zsMNKrUxYoBx9iiWzAekGg
+-->
+
 </html>
