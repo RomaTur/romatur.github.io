@@ -1,6 +1,6 @@
 #Site-Portfolio
 
-I'm developing this stuff
+I'm developing this stuff, please wait...
 
 [romatur.xyz][d99bca69]
 
