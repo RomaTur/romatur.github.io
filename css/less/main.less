@@ -16,22 +16,138 @@
 @desktop: ~"(min-width: 1025px)";
 @mainLinePositionDesktop: 30%;
 
+
+@color__one: white;
+@color__two: rgb(182, 104, 219);
+@color__three: rgb(78, 69, 79);
+
+
+
+
 body,
 footer,
 header,
 html {
-    background: lighten(@mainColor, 10%);
+    background: lighten(@color__two, 10%);
     margin: 0;
     width: 100vw;
     overflow-x: hidden;
 }
 
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    display: block;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
 * {
     transition: 0.2s;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 100;
 }
 ///////////ШАПКА///////////
 
-.headBg {
+.header{
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-image: url("../img/header/macbookFullHD.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    color: @color__one;
+}
+
+.header__overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(60, 38, 75, 0.85);
+    position: absolute;
+    z-index: 1;
+}
+
+.header__content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+text-align: center;
+}
+
+.header__name{
+    font-size: 6vw;
+}
+
+.header__desc{
+    font-size: 2vw;
+}
+
+.header__social{
+    list-style: none;
+    margin-top: 30px;
+
+}
+
+.header__social-item{
+    display: inline-block;
+    width: 110px;
+    height: 110px;
+    vertical-align: middle;
+    margin: 0 10px;
+
+}
+
+.social-item__link{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 1px solid @color__one;
+    position: relative;
+    line-height: 110px;
+    display: inline-block;
+    >i{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 50px;
+        color: @color__one;
+    }
+
+    &:hover {
+        height: 110px;
+        width: 110px;
+        line-height: 110px;
+        border: 1px solid lighten(@color__two, 5%);
+
+        >i {
+            color: lighten(@color__two, 5%);
+        }
+    }
+
+}
+
+.header__version{
+    font-size: 1vw;
+    position: absolute;
+    bottom: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+
+}
+
+/*
+.head {
     height: 100vh;
     background-position: center;
     background-image: url("../img/header/macbookFullHD.jpg");
@@ -172,6 +288,7 @@ html {
         }
     }
 }
+*/
 //////////////////////////////////////////////////////
 ///////////////////////КОНТЕНТ/////////////////////
 /////////////////////////////////////////////////////
