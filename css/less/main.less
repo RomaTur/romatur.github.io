@@ -12,7 +12,7 @@
 @phone: ~"(max-width: 767px)";
 @mainLinePositionPhone: 100%; // Mode: Tablet
 @tablet: ~"(min-width: 768px) and (max-width: 1024px)";
-@mainLinePositionTablet: 30%; // Mode: Desktop
+@mainLinePositionTablet: 40%; // Mode: Desktop
 @desktop: ~"(min-width: 1025px)";
 @mainLinePositionDesktop: 30%;
 @color__one: white;
@@ -88,6 +88,7 @@ section {
     transform: translate(-50%, -50%);
     z-index: 2;
     text-align: center;
+    width: 100%;
 }
 
 .header__name {
@@ -152,9 +153,119 @@ section {
     transform: translateX(-50%);
     z-index: 2;
 }
+@media @tablet {
+    .header__name {
+        font-size: 10vw;
+    }
+
+    .header__desc {
+        font-size: 3vw;
+    }
+
+    .header__social-item {
+        width: 90px;
+        height: 90px;
+    }
+
+    .social-item__link {
+        height: 80px;
+        width: 80px;
+
+        > i {
+            font-size: 40px;
+        }
+
+        &:hover {
+            height: 90px;
+            width: 90px;
+            line-height: 90px;
+
+            > i {
+                font-size: 45px;
+            }
+        }
+    }
+
+    .header__version {
+        font-size: 2vw;
+    }
+}
+@media @phone {
+    .header__content {
+        top: 40%;
+    }
+
+    .header__name {
+        font-size: 21vw;
+    }
+
+    .header__desc {
+        font-size: 5vw;
+    }
+
+    .header__social {
+        margin-top: 14vw;
+    }
+
+    .header__social-item {
+        width: 80px;
+        height: 80px;
+        margin: 0 3px;
+    }
+
+    .social-item__link {
+        height: 70px;
+        width: 70px;
+
+        > i {
+            font-size: 40px;
+        }
+
+        &:hover {
+            height: 80px;
+            width: 80px;
+
+            > i {
+                font-size: 45px;
+            }
+        }
+    }
+
+    .header__version {
+        font-size: 4vw;
+    }
+}
 //////////////////////////////////////////////////////
 ///////////////////////КОНТЕНТ/////////////////////
 /////////////////////////////////////////////////////
+
+
+.section__left-side {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 200;
+    text-align: right;
+    float: left;
+    padding-right: 25px;
+    width: @mainLinePositionDesktop;
+    font-size: 48px;
+    margin-top: -10px;
+}
+
+.section__right-side {
+    width: 45%;
+    float: left;
+    border-left: 4px solid @color__two;
+    padding-left: 30px;
+}
+
+@media @tablet {
+    .section__left-side {
+
+        width: @mainLinePositionTablet;
+
+    }
+
+}
 ////////ОБО МНЕ////////
 
 .about {
@@ -165,27 +276,13 @@ section {
     background-repeat: no-repeat;
     background-position: center;
 }
-/////////НАЗВАНИЕ РАЗДЕЛА И ФОТО/////////
-
-.section__left-side {
-    font-family: 'Exo 2', sans-serif;
-    font-weight: 200;
-    text-align: right;
-    float: left;
-    padding-right: 25px;
-    width: @mainLinePositionDesktop;
-    // width: 300px;
-    // line-height: 48px;
-    font-size: 48px;
-    margin-top: -10px;
-}
+/////////НАЗВАНИЕ РАЗДЕЛА И ФОТО////////
 
 .about__title {
     float: right;
     color: @color__two;
     width: 10ch;
-    // position: relative;
-    // right: 0;
+
 }
 
 .about__avatar {
@@ -220,16 +317,6 @@ section {
         margin-left: 5px;
     }
 }
-//////////ОСНОВНОЙ ТЕКСТ////////
-
-.section__right-side {
-    width: 45%;
-    float: left;
-    border-left: 4px solid @color__two;
-    padding-left: 30px;
-
-}
-
 
 .about__desc {
     font-size: 20px;
@@ -249,148 +336,162 @@ section {
     text-align: right;
     display: block;
 }
-////////////РЕЗЮМЕ////////////
-.resume {
-    padding: 100px 5%;
-    position: relative;
-    display: inline-block;
-    background-color: @sectionTwoColor;
-    font-family: 'Exo 2', sans-serif;
-    color: @sectionOneColor;
-    background-image: url("../img/content/resume/work.png");
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-}
-////////////НАЗВАНИЕ РАЗДЕЛА////////
 
-.resume__title {
-    float: right;
-    color: @color__two;
-    width: 10ch;
-    // font-size: 48px;
+@media @phone {
+    .about{
+        padding: 40px 30px;
+    }
+    .section__left-side{
+        width: 100%;
+    }
+    .section__right-side{
+        width: 100%;
+        border: none;
+        padding: 0;
+    }
+
+    .about__avatar-image{
+        float: none;
+        display: inline-block;
+        text-align: center;
+    }
+
+
 }
-// .resumeTitle {
-//     font-size: 48px;
-//     width: @mainLinePositionDesktop;
-//     font-weight: 300;
-//     float: left;
-//     text-align: right;
-//     padding-right: 25px;
+
+
+////////////РЕЗЮМЕ////////////
 //
-//     span {
-//         float: right;
-//         margin-top: -10px;
-//         padding-right: 10px;
+// .resume {
+//     padding: 100px 5%;
+//     position: relative;
+//     display: inline-block;
+//     background-color: @sectionTwoColor;
+//     font-family: 'Exo 2', sans-serif;
+//     color: @sectionOneColor;
+//     background-image: url("../img/content/resume/work.png");
+//     background-attachment: fixed;
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     width: 100%;
+// }
+// ////////////НАЗВАНИЕ РАЗДЕЛА////////
+//
+// .resume__title {
+//     float: right;
+//     color: @color__two;
+//     width: 10ch;
+//     padding-right: 10px;
+//     // font-size: 48px;
+// }
+// // .resumeTitle {
+// //     font-size: 48px;
+// //     width: @mainLinePositionDesktop;
+// //     font-weight: 300;
+// //     float: left;
+// //     text-align: right;
+// //     padding-right: 25px;
+// //
+// //     span {
+// //         float: right;
+// //         margin-top: -10px;
+// //         padding-right: 10px;
+// //     }
+// // }
+// //////////ОСНОВНОЙ ТЕКСТ////////
+//
+// .resumeText {
+//     float: left;
+//     width: 45%;
+//     border-left: 4px solid @mainColor;
+//     padding-left: 30px;
+//     font-size: 20px;
+//     padding-top: 0;
+// }
+//
+// .work {
+//     p {
+//         font-size: 20px;
+//         font-weight: 300;
+//         margin: 12px 0;
 //     }
 // }
-//////////ОСНОВНОЙ ТЕКСТ////////
-
-.resumeText {
-    float: left;
-    width: 45%;
-    border-left: 4px solid @mainColor;
-    padding-left: 30px;
-    font-size: 20px;
-    padding-top: 0;
-}
-
-.work {
-    p {
-        font-size: 20px;
-        font-weight: 300;
-        margin: 12px 0;
-    }
-}
-
-.workText {
-    margin-bottom: 50px;
-    font-weight: 200;
-    font-size: 16px;
-
-    &:last-of-type {
-        margin-bottom: 20px;
-    }
-}
-
-.workTitle {
-    color: @mainColor;
-    font-size: 26px;
-
-    p {
-        font-size: 20px;
-    }
-
-    div {
-        position: absolute;
-        margin-left: -52px;
-        margin-top: -3px;
-        font-size: 23px;
-        width: 40px;
-        height: 40px;
-        color: @sectionTwoColor;
-        background-color: @mainColor;
-        text-align: center;
-        border-radius: 20px;
-
-        p {
-            color: @sectionOneColor;
-            position: absolute;
-            width: 100px;
-            text-align: right;
-            margin: -25px 0 0 -110px;
-        }
-
-        i {
-            margin-top: 8px;
-        }
-    }
-}
+//
+// .workText {
+//     margin-bottom: 50px;
+//     font-weight: 200;
+//     font-size: 16px;
+//
+//     &:last-of-type {
+//         margin-bottom: 20px;
+//     }
+// }
+//
+// .workTitle {
+//     color: @mainColor;
+//     font-size: 26px;
+//
+//     p {
+//         font-size: 20px;
+//     }
+//
+//     div {
+//         position: absolute;
+//         margin-left: -52px;
+//         margin-top: -3px;
+//         font-size: 23px;
+//         width: 40px;
+//         height: 40px;
+//         color: @sectionTwoColor;
+//         background-color: @mainColor;
+//         text-align: center;
+//         border-radius: 20px;
+//
+//         p {
+//             color: @sectionOneColor;
+//             position: absolute;
+//             width: 100px;
+//             text-align: right;
+//             margin: -25px 0 0 -110px;
+//         }
+//
+//         i {
+//             margin-top: 8px;
+//         }
+//     }
+// }
 ///////////ПРОЕКТЫ////////////
 
 .projects {
     padding: 100px 5%;
     position: relative;
     display: inline-block;
-    background-color: @sectionOneColor;
+    background-color: @color__three;
     background-image: url("../img/content/projects/camera.png");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 18%;
-    width: 90%;
-    color: @mainColor;
+    width: 100%;
+    color: @color__two;
 }
 
-.projectsTitle {
-    float: left;
-    width: @mainLinePositionDesktop;
-    padding-right: 25px;
+.projects__title {
+    float: right;
+    width: 10ch;
     font-size: 48px;
 
-    span {
-        font-weight: 300;
-        float: right;
-        font-family: 'Exo 2', sans-serif;
-        padding-right: 10px;
-        margin-top: 5px;
-    }
 }
-@circleSize: 200px;
-@circleBorderRadius: @circleSize;
 
-.projectsContent {
-    float: left;
+
+.section__right-side_projects {
+
     width: 60%;
-    border-left: 4px solid @mainColor;
-    padding-left: 30px;
 
-    * {
-        box-sizing: border-box;
-    }
 }
 // .project {
+// @circleSize: 200px;
+// @circleBorderRadius: @circleSize;
 //     * {
 //         transition: 0.4s;
 //     }
@@ -550,13 +651,13 @@ section {
     position: relative;
     display: inline-block;
     width: 90%;
-    color: @sectionOneColor;
+    color: @color__two;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-image: url("../img/content/contact/chat.png");
     background-size: 18%;
-    background-color: @sectionTwoColor;
+    background-color: @color__one;
 }
 
 .contactTitle {
@@ -567,9 +668,8 @@ section {
 
     span {
         width: 100%;
-        font-weight: 300;
+        font-weight: 100;
         float: right;
-        font-family: 'Exo 2', sans-serif;
         padding-right: 10px;
         margin-top: 5px;
         text-align: right;
@@ -582,7 +682,6 @@ section {
         text-align: right;
         line-height: 30px;
         font-weight: 100;
-        font-family: 'Exo 2', sans-serif;
 
         a {
             color: @sectionOneColor;
@@ -737,445 +836,445 @@ footer {
 /////////////////////////
 /////////////////////////
 ///////////////TABLET MODE////////////
-@media @tablet {
-    .aboutMeTitle,
-    .contactTitle,
-    .projectsTitle,
-    .resumeTitle {
-        font-size: 36px;
-        width: @mainLinePositionTablet;
-
-        span:first-of-type {
-            display: none;
-        }
-
-        span:last-of-type {
-            display: block;
-        }
-    }
-
-    .aboutMe,
-    .contact,
-    .projects,
-    .resume {
-        padding: 75px 5%;
-    }
-
-    .aboutMeTitle {
-        img {
-            width: 150px;
-            margin-top: 20px;
-        }
-
-        p {
-            width: 100%;
-            font-size: 12px;
-        }
-    }
-
-    .aboutMeText {
-        width: 60%;
-
-        p {
-            font-size: 16px;
-        }
-    }
-
-    .resumeText {
-        width: 60%;
-    }
-
-    .work {
-        p {
-            margin: 8px 0;
-        }
-    }
-
-    .projectsTitle {
-        padding-right: 25px;
-        font-size: 42px;
-    }
-    @circleSize: 200px;
-    @circleBorderRadius: @circleSize;
-
-    .projectsContent {
-        width: 60%;
-    }
-
-    .grid-item,
-    .grid-sizer {
-        width: 50%;
-    }
-
-    .grid-item {
-        p {
-            font-size: 3vw;
-        }
-    }
-
-    .grid-item-width2 {
-        width: 100%;
-    }
-    //
-    // .project {
-    //     width: 100%;
-    //     height: @circleSize;
-    //     border-radius: @circleBorderRadius;
-    //     background-color: fade(@mainColor, 20%);
-    //     border: 3px solid fade(@mainColor, 40%);
-    //
-    //     div {
-    //         // &::before {
-    //         //     content: '';
-    //         //     display: inline-block;
-    //         //     height: 20%;
-    //         //     vertical-align: middle;
-    //         // }
-    //         float: right;
-    //         transform: scale(1);
-    //         position: relative;
-    //         width: @circleSize - 4;
-    //         height: @circleSize - 4;
-    //         opacity: 1;
-    //         background-color: fade(@mainColor, 0%);
-    //         border: 2px solid fade(@mainColor, 100%);
-    //         border: none;
-    //         width: @circleSize;
-    //         height: @circleSize;
-    //         font-size: 24px;
-    //     }
-    //
-    //     span {
-    //         width: @circleSize - 4;
-    //         height: @circleSize - 4;
-    //         border-radius: @circleBorderRadius;
-    //         border: 2px solid fade(@mainColor, 100%);
-    //
-    //         > img {
-    //             display: block;
-    //         }
-    //     }
-    //
-    //     &:hover {
-    //         span {
-    //             width: @circleSize - 4;
-    //             height: @circleSize - 4;
-    //             border: 2px solid fade(@mainColor, 100%);
-    //         }
-    //     }
-    // }
-    .contactForm {
-        width: 60%;
-
-        p {
-            width: 100%;
-        }
-    }
-
-    .form-submit {
-        width: 100%;
-
-        input {
-            font-size: 14px;
-        }
-    }
-
-    .form-element {
-        width: 100%;
-    }
-
-    .form-input__message {
-        width: 100%;
-        font-size: 14px;
-    }
-
-    .form-input__email,
-    .form-input__name {
-        width: 49%;
-        font-size: 14px;
-    }
-
-    .form-input__email {
-        float: right;
-    }
-}
-/////////////////////////
-/////////////////////////
-/////////////////////////
-///////////////PHONE MODE////////////
-@media @phone {
-    .aboutMeTitle,
-    .contactTitle,
-    .projectsTitle,
-    .resumeTitle {
-        font-size: 36px;
-        width: @mainLinePositionPhone;
-        float: none;
-        margin-top: 4vw;
-
-        span:first-of-type {
-            display: none;
-        }
-
-        span:last-of-type {
-            position: absolute;
-            top: 7vw;
-            left: 0;
-            width: 100vw;
-            display: block;
-            font-size: 10vw;
-            float: none;
-            text-align: center;
-            padding: 0;
-            margin: 0;
-        }
-
-        img {
-            max-width: 50vw;
-        }
-    }
-
-    .aboutMe,
-    .contact,
-    .projects,
-    .resume {
-        width: 80%;
-        padding: 50px 10%;
-    }
-
-    .aboutMeText,
-    .contactForm,
-    .projectsText,
-    .resumeText {
-        width: 100%;
-        margin-top: 30px;
-    }
-
-    .headBg {
-        .headText {
-            margin-top: -20%;
-        }
-
-        ul {
-            line-height: 2vh;
-            margin-top: 80px;
-
-            li {
-                width: 75px;
-                height: 75px;
-                margin: 5px;
-
-                a {
-                    width: 75px;
-                    height: 75px;
-                    margin-left: -37px;
-
-                    i {
-                        font-size: 40px;
-                    }
-                }
-
-                &:nth-child(1) {
-                    i {
-                        margin-left: -22px;
-                        margin-top: 18px;
-                    }
-                }
-
-                &:nth-child(2) {
-                    i {
-                        margin-left: -18px;
-                        margin-top: 18px;
-                    }
-                }
-
-                &:nth-child(3) {
-                    i {
-                        margin-left: -17px;
-                        margin-top: 17px;
-                    }
-                }
-            }
-        }
-    }
-
-    .aboutMe {
-        // padding: 50px 5%;
-    }
-
-    .aboutMeTitle {
-        text-align: center;
-        // span:first-of-type {
-        //     display: none;
-        // }
-        //
-        // span:last-of-type {
-        //     display: block;
-        //     font-size: 5vh;
-        // }
-        img {
-            float: none;
-            margin: 30px auto 0;
-            width: 90%;
-            border-radius: 90%;
-        }
-
-        p {
-            display: none;
-        }
-    }
-
-    .aboutMeText {
-        p {
-            font-size: 2.6vh;
-        }
-
-        p:last-of-type {
-            width: 60%;
-            height: 200px;
-        }
-    }
-
-    .resumeTitle {
-        width: 100%;
-
-        span:last-of-type {
-            font-size: 8vw;
-        }
-    }
-
-    .resumeText {
-        width: 85%;
-    }
-
-    .workTitle {
-        color: @mainColor;
-        font-size: 4vh;
-
-        p {
-            font-size: 16px;
-        }
-
-        div {
-            p {
-                display: none;
-            }
-
-            i {
-                margin-top: 8px;
-            }
-        }
-    }
-
-    .work {
-        p {
-            font-size: 2.9vh;
-        }
-    }
-
-    .workText {
-        font-size: 2.5vh;
-    }
-
-    .projectsContent {
-        border: none;
-        float: none;
-        padding: 0;
-        width: 100%;
-        padding-top: 30px;
-        margin: 0;
-    }
-
-    .projects {
-        width: 100%;
-        padding: 50px 0 0;
-    }
-    //
-    // .project {
-    //     width: 100%;
-    //     height: 100%;
-    //     border: none;
-    //     border-radius: 0;
-    //     margin: 0;
-    //     padding: 0;
-    //
-    //     span {
-    //         display: none;
-    //     }
-    // }
-    //
-    // .projectText {
-    //     display: none;
-    // }
-    .grid-item,
-    .grid-item-width2,
-    .grid-sizer {
-        width: 100%;
-        padding: 0;
-    }
-
-    .grid-item {
-        p {
-            font-size: 10vw;
-        }
-    }
-
-    .hoverProjectsContent {
-        width: 100%;
-        height: 100%;
-    }
-
-    .contactTitle {
-        p {
-            font-size: 3vh;
-            line-height: 7.5vh;
-            margin: -20px 0 20px;
-        }
-    }
-
-    .contactForm {
-        font-size: 3vh;
-        border: none;
-        padding: 0;
-        margin: 0;
-
-        p {
-            width: 100%;
-        }
-    }
-
-    .form-element {
-        width: 100%;
-    }
-
-    .form-input__email,
-    .form-input__message,
-    .form-input__name {
-        font-size: 3vh;
-        border-bottom: 4px solid @mainColor;
-        width: 100%;
-    }
-
-    .form-input__message {
-        height: 20vh;
-    }
-
-    .form-submit {
-        width: 100%;
-
-        input {
-            float: right;
-            width: 100%;
-        }
-
-        img {
-            width: 100%;
-            height: inherit;
-            float: left;
-            margin-bottom: 20px;
-        }
-    }
-}
+// @media @tablet {
+//     .aboutMeTitle,
+//     .contactTitle,
+//     .projectsTitle,
+//     .resumeTitle {
+//         font-size: 36px;
+//         width: @mainLinePositionTablet;
+//
+//         span:first-of-type {
+//             display: none;
+//         }
+//
+//         span:last-of-type {
+//             display: block;
+//         }
+//     }
+//
+//     .aboutMe,
+//     .contact,
+//     .projects,
+//     .resume {
+//         padding: 75px 5%;
+//     }
+//
+//     .aboutMeTitle {
+//         img {
+//             width: 150px;
+//             margin-top: 20px;
+//         }
+//
+//         p {
+//             width: 100%;
+//             font-size: 12px;
+//         }
+//     }
+//
+//     .aboutMeText {
+//         width: 60%;
+//
+//         p {
+//             font-size: 16px;
+//         }
+//     }
+//
+//     .resumeText {
+//         width: 60%;
+//     }
+//
+//     .work {
+//         p {
+//             margin: 8px 0;
+//         }
+//     }
+//
+//     .projectsTitle {
+//         padding-right: 25px;
+//         font-size: 42px;
+//     }
+//     @circleSize: 200px;
+//     @circleBorderRadius: @circleSize;
+//
+//     .projectsContent {
+//         width: 60%;
+//     }
+//
+//     .grid-item,
+//     .grid-sizer {
+//         width: 50%;
+//     }
+//
+//     .grid-item {
+//         p {
+//             font-size: 3vw;
+//         }
+//     }
+//
+//     .grid-item-width2 {
+//         width: 100%;
+//     }
+//     //
+//     // .project {
+//     //     width: 100%;
+//     //     height: @circleSize;
+//     //     border-radius: @circleBorderRadius;
+//     //     background-color: fade(@mainColor, 20%);
+//     //     border: 3px solid fade(@mainColor, 40%);
+//     //
+//     //     div {
+//     //         // &::before {
+//     //         //     content: '';
+//     //         //     display: inline-block;
+//     //         //     height: 20%;
+//     //         //     vertical-align: middle;
+//     //         // }
+//     //         float: right;
+//     //         transform: scale(1);
+//     //         position: relative;
+//     //         width: @circleSize - 4;
+//     //         height: @circleSize - 4;
+//     //         opacity: 1;
+//     //         background-color: fade(@mainColor, 0%);
+//     //         border: 2px solid fade(@mainColor, 100%);
+//     //         border: none;
+//     //         width: @circleSize;
+//     //         height: @circleSize;
+//     //         font-size: 24px;
+//     //     }
+//     //
+//     //     span {
+//     //         width: @circleSize - 4;
+//     //         height: @circleSize - 4;
+//     //         border-radius: @circleBorderRadius;
+//     //         border: 2px solid fade(@mainColor, 100%);
+//     //
+//     //         > img {
+//     //             display: block;
+//     //         }
+//     //     }
+//     //
+//     //     &:hover {
+//     //         span {
+//     //             width: @circleSize - 4;
+//     //             height: @circleSize - 4;
+//     //             border: 2px solid fade(@mainColor, 100%);
+//     //         }
+//     //     }
+//     // }
+//     .contactForm {
+//         width: 60%;
+//
+//         p {
+//             width: 100%;
+//         }
+//     }
+//
+//     .form-submit {
+//         width: 100%;
+//
+//         input {
+//             font-size: 14px;
+//         }
+//     }
+//
+//     .form-element {
+//         width: 100%;
+//     }
+//
+//     .form-input__message {
+//         width: 100%;
+//         font-size: 14px;
+//     }
+//
+//     .form-input__email,
+//     .form-input__name {
+//         width: 49%;
+//         font-size: 14px;
+//     }
+//
+//     .form-input__email {
+//         float: right;
+//     }
+// }
+// /////////////////////////
+// /////////////////////////
+// /////////////////////////
+// ///////////////PHONE MODE////////////
+// @media @phone {
+//     .aboutMeTitle,
+//     .contactTitle,
+//     .projectsTitle,
+//     .resumeTitle {
+//         font-size: 36px;
+//         width: @mainLinePositionPhone;
+//         float: none;
+//         margin-top: 4vw;
+//
+//         span:first-of-type {
+//             display: none;
+//         }
+//
+//         span:last-of-type {
+//             position: absolute;
+//             top: 7vw;
+//             left: 0;
+//             width: 100vw;
+//             display: block;
+//             font-size: 10vw;
+//             float: none;
+//             text-align: center;
+//             padding: 0;
+//             margin: 0;
+//         }
+//
+//         img {
+//             max-width: 50vw;
+//         }
+//     }
+//
+//     .aboutMe,
+//     .contact,
+//     .projects,
+//     .resume {
+//         width: 80%;
+//         padding: 50px 10%;
+//     }
+//
+//     .aboutMeText,
+//     .contactForm,
+//     .projectsText,
+//     .resumeText {
+//         width: 100%;
+//         margin-top: 30px;
+//     }
+//
+//     .headBg {
+//         .headText {
+//             margin-top: -20%;
+//         }
+//
+//         ul {
+//             line-height: 2vh;
+//             margin-top: 80px;
+//
+//             li {
+//                 width: 75px;
+//                 height: 75px;
+//                 margin: 5px;
+//
+//                 a {
+//                     width: 75px;
+//                     height: 75px;
+//                     margin-left: -37px;
+//
+//                     i {
+//                         font-size: 40px;
+//                     }
+//                 }
+//
+//                 &:nth-child(1) {
+//                     i {
+//                         margin-left: -22px;
+//                         margin-top: 18px;
+//                     }
+//                 }
+//
+//                 &:nth-child(2) {
+//                     i {
+//                         margin-left: -18px;
+//                         margin-top: 18px;
+//                     }
+//                 }
+//
+//                 &:nth-child(3) {
+//                     i {
+//                         margin-left: -17px;
+//                         margin-top: 17px;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+//
+//     .aboutMe {
+//         // padding: 50px 5%;
+//     }
+//
+//     .aboutMeTitle {
+//         text-align: center;
+//         // span:first-of-type {
+//         //     display: none;
+//         // }
+//         //
+//         // span:last-of-type {
+//         //     display: block;
+//         //     font-size: 5vh;
+//         // }
+//         img {
+//             float: none;
+//             margin: 30px auto 0;
+//             width: 90%;
+//             border-radius: 90%;
+//         }
+//
+//         p {
+//             display: none;
+//         }
+//     }
+//
+//     .aboutMeText {
+//         p {
+//             font-size: 2.6vh;
+//         }
+//
+//         p:last-of-type {
+//             width: 60%;
+//             height: 200px;
+//         }
+//     }
+//
+//     .resumeTitle {
+//         width: 100%;
+//
+//         span:last-of-type {
+//             font-size: 8vw;
+//         }
+//     }
+//
+//     .resumeText {
+//         width: 85%;
+//     }
+//
+//     .workTitle {
+//         color: @mainColor;
+//         font-size: 4vh;
+//
+//         p {
+//             font-size: 16px;
+//         }
+//
+//         div {
+//             p {
+//                 display: none;
+//             }
+//
+//             i {
+//                 margin-top: 8px;
+//             }
+//         }
+//     }
+//
+//     .work {
+//         p {
+//             font-size: 2.9vh;
+//         }
+//     }
+//
+//     .workText {
+//         font-size: 2.5vh;
+//     }
+//
+//     .projectsContent {
+//         border: none;
+//         float: none;
+//         padding: 0;
+//         width: 100%;
+//         padding-top: 30px;
+//         margin: 0;
+//     }
+//
+//     .projects {
+//         width: 100%;
+//         padding: 50px 0 0;
+//     }
+//     //
+//     // .project {
+//     //     width: 100%;
+//     //     height: 100%;
+//     //     border: none;
+//     //     border-radius: 0;
+//     //     margin: 0;
+//     //     padding: 0;
+//     //
+//     //     span {
+//     //         display: none;
+//     //     }
+//     // }
+//     //
+//     // .projectText {
+//     //     display: none;
+//     // }
+//     .grid-item,
+//     .grid-item-width2,
+//     .grid-sizer {
+//         width: 100%;
+//         padding: 0;
+//     }
+//
+//     .grid-item {
+//         p {
+//             font-size: 10vw;
+//         }
+//     }
+//
+//     .hoverProjectsContent {
+//         width: 100%;
+//         height: 100%;
+//     }
+//
+//     .contactTitle {
+//         p {
+//             font-size: 3vh;
+//             line-height: 7.5vh;
+//             margin: -20px 0 20px;
+//         }
+//     }
+//
+//     .contactForm {
+//         font-size: 3vh;
+//         border: none;
+//         padding: 0;
+//         margin: 0;
+//
+//         p {
+//             width: 100%;
+//         }
+//     }
+//
+//     .form-element {
+//         width: 100%;
+//     }
+//
+//     .form-input__email,
+//     .form-input__message,
+//     .form-input__name {
+//         font-size: 3vh;
+//         border-bottom: 4px solid @mainColor;
+//         width: 100%;
+//     }
+//
+//     .form-input__message {
+//         height: 20vh;
+//     }
+//
+//     .form-submit {
+//         width: 100%;
+//
+//         input {
+//             float: right;
+//             width: 100%;
+//         }
+//
+//         img {
+//             width: 100%;
+//             height: inherit;
+//             float: left;
+//             margin-bottom: 20px;
+//         }
+//     }
+// }
 
 .clearfix {
     &:after {
