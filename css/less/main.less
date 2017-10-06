@@ -16,8 +16,8 @@
 @desktop: ~"(min-width: 1025px)";
 @mainLinePositionDesktop: 30%;
 @color__one: white;
-@color__two: rgb(182, 104, 219);
-@color__three: rgb(78, 69, 79);
+@color__two: #b668db;
+@color__three: #4e454f;
 
 body,
 footer,
@@ -226,7 +226,7 @@ section {
             width: 80px;
 
             > i {
-                font-size: 45px;
+                font-size: 50px;
             }
         }
     }
@@ -238,7 +238,6 @@ section {
 //////////////////////////////////////////////////////
 ///////////////////////КОНТЕНТ/////////////////////
 /////////////////////////////////////////////////////
-
 
 .section__left-side {
     font-family: 'Exo 2', sans-serif;
@@ -257,14 +256,10 @@ section {
     border-left: 4px solid @color__two;
     padding-left: 30px;
 }
-
 @media @tablet {
     .section__left-side {
-
         width: @mainLinePositionTablet;
-
     }
-
 }
 ////////ОБО МНЕ////////
 
@@ -282,7 +277,6 @@ section {
     float: right;
     color: @color__two;
     width: 10ch;
-
 }
 
 .about__avatar {
@@ -336,30 +330,27 @@ section {
     text-align: right;
     display: block;
 }
-
 @media @phone {
-    .about{
+    .about {
         padding: 40px 30px;
     }
-    .section__left-side{
+
+    .section__left-side {
         width: 100%;
     }
-    .section__right-side{
+
+    .section__right-side {
         width: 100%;
         border: none;
         padding: 0;
     }
 
-    .about__avatar-image{
+    .about__avatar-image {
         float: none;
         display: inline-block;
         text-align: center;
     }
-
-
 }
-
-
 ////////////РЕЗЮМЕ////////////
 //
 // .resume {
@@ -466,7 +457,7 @@ section {
     padding: 100px 5%;
     position: relative;
     display: inline-block;
-    background-color: @color__three;
+    // background-color: @color__three;
     background-image: url("../img/content/projects/camera.png");
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -474,20 +465,74 @@ section {
     background-size: 18%;
     width: 100%;
     color: @color__two;
+    background: linear-gradient(228deg, #382a3a, #59505a, #564658, #352636);
+    background-size: 800% 800%;
+    -webkit-animation: AnimationName 16s ease infinite;
+    -moz-animation: AnimationName 16s ease infinite;
+    -o-animation: AnimationName 16s ease infinite;
+    animation: AnimationName 16s ease infinite;
+    @-webkit-keyframes AnimationName {
+        0% {
+            background-position: 0 90%;
+        }
+
+        50% {
+            background-position: 100% 11%;
+        }
+
+        100% {
+            background-position: 0 90%;
+        }
+    }
+    @-moz-keyframes AnimationName {
+        0% {
+            background-position: 0 90%;
+        }
+
+        50% {
+            background-position: 100% 11%;
+        }
+
+        100% {
+            background-position: 0 90%;
+        }
+    }
+    @-o-keyframes AnimationName {
+        0% {
+            background-position: 0 90%;
+        }
+
+        50% {
+            background-position: 100% 11%;
+        }
+
+        100% {
+            background-position: 0 90%;
+        }
+    }
+    @keyframes AnimationName {
+        0% {
+            background-position: 0 90%;
+        }
+
+        50% {
+            background-position: 100% 11%;
+        }
+
+        100% {
+            background-position: 0 90%;
+        }
+    }
 }
 
 .projects__title {
     float: right;
     width: 10ch;
     font-size: 48px;
-
 }
 
-
 .section__right-side_projects {
-
     width: 60%;
-
 }
 // .project {
 // @circleSize: 200px;
@@ -581,35 +626,25 @@ section {
     height: 100%;
 }
 /* ---- grid ---- */
-.grid {
+.projects__grid {
     // background: #DDD;
+    list-style: none;
 }
 /* clear fix */
-.grid:after {
+.projects__grid:after {
     content: '';
     display: block;
     clear: both;
 }
 /* ---- .grid-item ---- */
-.grid-item,
-.grid-sizer {
+.projects__grid-item,
+.projects__grid-sizer {
     width: 33.3333%;
 }
 
-.grid-item {
+.projects__grid-item {
     float: left;
-    padding: 2px;
-
-    img {
-        display: block;
-        width: 100%;
-        height: 100%;
-    }
-
-    frame {
-        width: 100%;
-        height: 200px;
-    }
+    padding: 5px;
 
     p {
         position: absolute;
@@ -623,8 +658,15 @@ section {
     }
 }
 
-.hoverProjectsContent {
+.project__background {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.project__overlay {
     position: absolute;
+    // display: none;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -641,16 +683,15 @@ section {
     }
 }
 
-.grid-item-width2 {
+.projects__grid-item--width2 {
     width: 66.6666%;
 }
 /////////КОНТАКТЫ/////////
-
 .contact {
     padding: 100px 5%;
     position: relative;
     display: inline-block;
-    width: 90%;
+    width: 100%;
     color: @color__two;
     background-position: center;
     background-attachment: fixed;
@@ -660,48 +701,47 @@ section {
     background-color: @color__one;
 }
 
-.contactTitle {
-    float: left;
-    width: @mainLinePositionDesktop;
-    padding-right: 25px;
+.contact__title {
+    float: right;
+    width: 6ch;
     font-size: 48px;
+    font-weight: 100;
+}
 
-    span {
-        width: 100%;
-        font-weight: 100;
-        float: right;
-        padding-right: 10px;
-        margin-top: 5px;
-        text-align: right;
-    }
+.contact__address {
+    width: 100%;
+    float: right;
+    font-size: 16px;
+    text-align: right;
+    font-weight: 100;
+    margin-top: 100px;
 
-    p {
-        width: 100%;
-        float: right;
-        font-size: 16px;
-        text-align: right;
-        line-height: 30px;
-        font-weight: 100;
 
-        a {
-            color: @sectionOneColor;
-            text-decoration: none;
-            // border: none;
-            border-style: dashed;
-            border-width: 0 0 1px 0;
-            border-color: lighten(@sectionTwoColor, 20%);
+}
 
-            &:hover {
-                color: lighten(@mainColor, 15%);
-                border-color: lighten(@sectionTwoColor, 20%);
-            }
-        }
+.address__link{
+    display: inline-block;
+    color: @color__two;
+    text-decoration: none;
+    margin-bottom: 15px;
+    border-style: dashed;
+    border-width: 0 0 1px 0;
+    border-color: lighten(@color__three, 20%);
 
-        i {
-            width: 1ch;
-        }
+    &:hover {
+        color: darken(@color__two, 25%);
+        border-color: lighten(@color__three, 20%);
     }
 }
+
+.address__icon{
+    display: inline-block;
+    width: 20px;
+    text-align: center;
+}
+
+
+
 
 .contactForm {
     float: left;
@@ -761,8 +801,10 @@ section {
     font-size: 1rem;
     padding: 15px;
     border: none;
-    border-bottom: 4px solid @mainColor;
+    // border-bottom: 4px solid @mainColor;
     outline: none;
+    color: @color__two;
+    background-color: lighten(@color__three, 50%);
 }
 
 .form-input__email,
@@ -1219,7 +1261,7 @@ footer {
 //         }
 //     }
 //
-//     .hoverProjectsContent {
+//     .project__overlay {
 //         width: 100%;
 //         height: 100%;
 //     }
