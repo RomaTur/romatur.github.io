@@ -692,7 +692,7 @@ section {
     position: relative;
     display: inline-block;
     width: 100%;
-    color: @color__two;
+
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -706,6 +706,8 @@ section {
     width: 6ch;
     font-size: 48px;
     font-weight: 100;
+    color: @color__two;
+
 }
 
 .contact__address {
@@ -715,6 +717,7 @@ section {
     text-align: right;
     font-weight: 100;
     margin-top: 100px;
+    color: @color__two;
 
 
 }
@@ -751,6 +754,7 @@ section {
     font-family: 'Exo 2', sans-serif;
     font-size: 18px;
     font-weight: 100;
+    color: black;
 
     p {
         width: 90%;
@@ -774,9 +778,11 @@ section {
         border: none;
         padding: 15px;
         background: @mainColor;
-        color: #fff;
+        // color: #fff;
         font-weight: 700;
         cursor: pointer;
+        font-family: ExoTwo,sans-serif;
+        font-weight: 100;
     }
 
     img {
@@ -803,13 +809,19 @@ section {
     border: none;
     // border-bottom: 4px solid @mainColor;
     outline: none;
-    color: @color__two;
-    background-color: lighten(@color__three, 50%);
+    // color: @color__two;
+    // background-color: lighten(@color__three, 50%);
+    font-family: ExoTwo,sans-serif;
+
+
 }
 
 .form-input__email,
 .form-input__name {
     width: 49.5%;
+    border-top: 1px solid fade(@color__two, 50%);
+border-bottom: 1px solid fade(@color__two, 50%);
+
 }
 
 .form-input__email {
@@ -818,6 +830,8 @@ section {
 
 .form-input__message {
     height: 20vh;
+    border-top: 1px solid fade(@color__two, 50%);
+border-bottom: 1px solid fade(@color__two, 50%);
 }
 
 .form-input__email:focus,
@@ -844,19 +858,18 @@ section {
     display: none;
 }
 
-footer {
-    // height:10vh;
-    width: 100vw;
-    font-size: 18px;
-}
 
-.logoContainer {
+
+.footer {
     &::before {
         content: '';
         display: inline-block;
         height: 100%;
         vertical-align: middle;
     }
+    width: 100vw;
+    font-size: 18px;
+    line-height: 44px;
     text-align: center;
     // height: 10vh;
     width: 100%;
@@ -864,7 +877,7 @@ footer {
     font-family: 'Exo 2', sans-serif;
     position: absolute;
 
-    p {
+
         display: inline-block;
         vertical-align: middle;
         text-align: center;
@@ -872,7 +885,7 @@ footer {
         font-weight: 100;
         // margin-bottom: 15%;
         // width: 20%;
-    }
+
 }
 /////////////////////////
 /////////////////////////
