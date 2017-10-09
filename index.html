@@ -62,177 +62,219 @@
 
 
         <section class="about clearfix">
-            <div class="section__left-side">
-                <!-- <div class="about__title">БУДЕМ<br>ЗНАКОМЫ</div> -->
-                <div class="about__title">БУДЕМ ЗНАКОМЫ</div>
-                <div class="about__avatar">
 
-                    <img src="img/content/about/me.jpg" alt="аватар" class="about__avatar-image">
+            <div class="section__wrapper">
+                <div class="section__left-side">
+                    <!-- <div class="about__title">БУДЕМ<br>ЗНАКОМЫ</div> -->
+                    <div class="about__title">БУДЕМ ЗНАКОМЫ</div>
+                    <div class="about__avatar">
+
+                        <img src="img/content/about/me.jpg" alt="аватар" class="about__avatar-image">
+
+                    </div>
+
+                    <ul class="about__character">
+                        <li class="about__character-item">
+                            Возраст:&nbsp;
+                            <!-- ПОДСЧЕТ ЛЕТ -->
+                            <script>
+                                function declOfNum(number, titles) {
+                                    cases = [2, 0, 1, 1, 1, 2];
+                                    return number + " " + titles[(number % 100 > 4 && number % 100 < 20) ? 2 : cases[(number % 10 < 5) ? number % 10 : 5]];
+                                }
+
+                                function birthDateToAge(b) {
+                                    var n = new Date(),
+                                        b = new Date(b),
+                                        age = n.getFullYear() - b.getFullYear();
+                                    return n.setFullYear(1972) < b.setFullYear(1972) ? age - 1 : age;
+                                }
+                                document.write(declOfNum(birthDateToAge("1994-08-08"), ['', '', '']));
+                            </script>
+                            <!-- КОНЕЦ ПОДСЧЕТА ЛЕТ -->
+                        </li>
+                        <li class="about__character-item">
+                            Оптимистичен<i class="fa fa-smile-o" aria-hidden="true"></i>
+                        </li>
+                        <li class="about__character-item">
+                            Желаю обучаться<i class="fa fa-book" aria-hidden="true"></i>
+                        </li>
+                        <li class="about__character-item">
+                            Люблю вкусное кофе<i class="fa fa-coffee" aria-hidden="true"></i>
+                        </li>
+                        <li class="about__character-item">
+                            Увлекаюсь фотографией<i class="fa fa-camera" aria-hidden="true"></i>
+                        </li>
+                        <li class="about__character-item">
+                            Умею работать в дедлайне<i class="fa fa-clock-o" aria-hidden="true"></i>
+                        </li>
+                        <li class="about__character-item">
+                            Настроен на результат<i class="fa fa-line-chart" aria-hidden="true"></i>
+
+                        </li>
+                        <li class="about__character-item">
+                            Больше практики<i class="fa fa-desktop" aria-hidden="true"></i>
+                        </li>
+                    </ul>
 
                 </div>
 
-                <ul class="about__character">
-                    <li class="about__character-item">
-                        Возраст:&nbsp;
-                        <!-- ПОДСЧЕТ ЛЕТ -->
-                        <script>
-                            function declOfNum(number, titles) {
-                                cases = [2, 0, 1, 1, 1, 2];
-                                return number + " " + titles[(number % 100 > 4 && number % 100 < 20) ? 2 : cases[(number % 10 < 5) ? number % 10 : 5]];
-                            }
 
-                            function birthDateToAge(b) {
-                                var n = new Date(),
-                                    b = new Date(b),
-                                    age = n.getFullYear() - b.getFullYear();
-                                return n.setFullYear(1972) < b.setFullYear(1972) ? age - 1 : age;
-                            }
-                            document.write(declOfNum(birthDateToAge("1994-08-08"), ['', '', '']));
-                        </script>
-                        <!-- КОНЕЦ ПОДСЧЕТА ЛЕТ -->
-                    </li>
-                    <li class="about__character-item">
-                        Оптимистичен<i class="fa fa-smile-o" aria-hidden="true"></i>
-                    </li>
-                    <li class="about__character-item">
-                        Желаю обучаться<i class="fa fa-book" aria-hidden="true"></i>
-                    </li>
-                    <li class="about__character-item">
-                        Люблю вкусное кофе<i class="fa fa-coffee" aria-hidden="true"></i>
-                    </li>
-                    <li class="about__character-item">
-                        Увлекаюсь фотографией<i class="fa fa-camera" aria-hidden="true"></i>
-                    </li>
-                    <li class="about__character-item">
-                        Умею работать в дедлайне<i class="fa fa-clock-o" aria-hidden="true"></i>
-                    </li>
-                    <li class="about__character-item">
-                        Настроен на результат<i class="fa fa-line-chart" aria-hidden="true"></i>
+                <div class="section__right-side">
 
-                    </li>
-                    <li class="about__character-item">
-                        Больше практики<i class="fa fa-desktop" aria-hidden="true"></i>
-                    </li>
-                </ul>
-
-            </div>
+                    <div class="about__desc">
+                        <span class="about__desc-title">Немного о себе</span>
+                        <p class="about__desc-text">
+                            Доброго времени суток, меня зовут Роман. Интересуюсь разработкой Web сайтов, Web приложений, приложений для Mac и ПО для микроконтроллеров. Для меня программирование не просто трудовой процесс, а еще творчество и увлечение.
+                        </p>
 
 
-            <div class="section__right-side">
 
-                <p class="about__desc">
-                    Я перспективный молодой человек, который хочет реализовать свой потенциал в любимом деле. Являясь бакалавром ВУЗа (National Research University of Electronic Technology) по специализации в области электротехники, развиваюсь в сторону WEB и Интернет вещей.
-                    Проявляю к этому немалый интерес и получаю реальное удовольствие от программирования и создания медиа контента.
-                </p>
-                <div class="about__quote">
-                    <q class="about__quote-text">Большинство хороших программистов делают свою работу не потому, что ожидают оплаты или признания, а потому что получают удовольствие от программирования.</q>
-                    <span class="about__quote-author">
-                        - Linus Torvalds
-                    </span>
+                    </div>
+
+
+
+                    <!-- <p class="about__desc">
+                        Я перспективный молодой человек, который хочет реализовать свой потенциал в любимом деле. Являясь бакалавром ВУЗа (National Research University of Electronic Technology) по специализации в области электротехники, развиваюсь в сторону WEB и Интернет вещей.
+                        Проявляю к этому немалый интерес и получаю реальное удовольствие от программирования и создания медиа контента.
+                    </p>-->
+                    <div class="about__quote">
+                        <q class="about__quote-text">Большинство хороших программистов делают свою работу не потому, что ожидают оплаты или признания, а потому что получают удовольствие от программирования.</q>
+                        <span class="about__quote-author">
+                            - Linus Torvalds
+                        </span>
+                    </div>
+                    <div class="about__education">
+
+                        <div class="education-miet">
+
+                            <p class="education-miet__desc">
+                                <span class="education-miet__title">Высшее</span> Национальный Исследовательский Университет МИЭТ (Московский Институт Электронной Техники) <br><br> Факультет Электроники и Компьютерных Технологий <br><br> Специальность
+                                "Информатика и вычислительная техника"
+                            </p>
+                            <img src="img/content/about/miet.png" alt="MIET" class="education-miet__image">
+
+
+                        </div>
+                    </div>
+
+                    <div class="education-knowledge clearfix">
+
+                        <img src="img/content/about/student.png" alt="Student" class="education-knowledge__image">
+                        <p class="education-knowledge__desc">
+                            <span class="education-knowledge__title">Знания и навыки</span> Национальный Исследовательский Университет МИЭТ (Московский Институт Электронной Техники)
+                        </p>
+
+
+
+                    </div>
+
                 </div>
 
 
-            </div>
         </section>
 
 
         <section class="projects clearfix">
 
+            <div class="section__wrapper">
 
-            <div class="section__left-side">
-                <div class="projects__title">
-                    ПОДЕЛКИ
+                <div class="section__left-side">
+                    <div class="projects__title">
+                        ПОДЕЛКИ
+                    </div>
                 </div>
-            </div>
 
 
 
 
 
-            <div class="section__right-side section__right-side_projects">
+                <div class="section__right-side section__right-side_projects">
 
-                <ul class="projects__grid">
-                    <div class="projects__grid-sizer"></div>
+                    <ul class="projects__grid">
+                        <div class="projects__grid-sizer"></div>
 
-                    <li class="projects__grid-item projects__grid-item--width2">
-                        <img src="img/content/projects/example.jpg" class="project__background" />
-                        <div class="project__overlay">
+                        <li class="projects__grid-item projects__grid-item--width2">
+                            <img src="img/content/projects/example.jpg" class="project__background" />
+                            <div class="project__overlay">
 
-                        </div>
-                    </li>
-
-
-                    <li class="projects__grid-item">
-                        <img src="img/content/projects/example.jpg" class="project__background" />
-                        <div class="project__overlay">
+                            </div>
+                        </li>
 
 
-                        </div>
-                    </li>
-                    <li class="projects__grid-item">
-                        <div class="videoWrapper">
-                            <iframe width="640" height="360" src="https://www.youtube.com/embed/B7_CMlUwiRI?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen class="project__background"></iframe>
-                        </div>
-                        <div class="project__overlay">
-
-                        </div>
-                    </li>
-                    <li class="projects__grid-item">
-                        <img src="img/content/projects/example.jpg" class="project__background" />
-                        <div class="project__overlay">
-
-                        </div>
-                    </li>
-                    <li class="projects__grid-item">
-                        <img src="img/content/projects/example.jpg" class="project__background" />
-                        <div class="project__overlay">
-
-                        </div>
-                    </li>
-                    <li class="projects__grid-item">
-                        <img src="img/content/projects/example.jpg" class="project__background" />
-                        <div class="project__overlay">
-
-                        </div>
-                    </li>
-                    <li class="projects__grid-item">
-                        <img src="img/content/projects/example.jpg" class="project__background" />
-                        <div class="project__overlay">
-
-                        </div>
-                    </li>
-                    <li class="projects__grid-item">
-                        <img src="img/content/projects/example.jpg" class="project__background" />
-                        <div class="project__overlay">
-
-                        </div>
-                    </li>
-                    <li class="projects__grid-item">
-                        <img src="img/content/projects/giphyExample.gif" alt="Пример" width="100%" height="100%" class="project__background">
-                        <div class="project__overlay">
-
-                        </div>
-                    </li>
-
-                </ul>
+                        <li class="projects__grid-item">
+                            <img src="img/content/projects/example.jpg" class="project__background" />
+                            <div class="project__overlay">
 
 
-                <script type="text/javascript">
-                    // init Masonry after all images have loaded
-                    var $grid = $('.projects__grid').imagesLoaded(function() {
-                        $grid.masonry({
-                            itemSelector: '.projects__grid-item',
-                            percentPosition: true,
-                            columnWidth: '.projects__grid-sizer'
+                            </div>
+                        </li>
+                        <li class="projects__grid-item">
+                            <div class="videoWrapper">
+                                <iframe width="640" height="360" src="https://www.youtube.com/embed/B7_CMlUwiRI?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen class="project__background"></iframe>
+                            </div>
+                            <div class="project__overlay">
+
+                            </div>
+                        </li>
+                        <li class="projects__grid-item">
+                            <img src="img/content/projects/example.jpg" class="project__background" />
+                            <div class="project__overlay">
+
+                            </div>
+                        </li>
+                        <li class="projects__grid-item">
+                            <img src="img/content/projects/example.jpg" class="project__background" />
+                            <div class="project__overlay">
+
+                            </div>
+                        </li>
+                        <li class="projects__grid-item">
+                            <img src="img/content/projects/example.jpg" class="project__background" />
+                            <div class="project__overlay">
+
+                            </div>
+                        </li>
+                        <li class="projects__grid-item">
+                            <img src="img/content/projects/example.jpg" class="project__background" />
+                            <div class="project__overlay">
+
+                            </div>
+                        </li>
+                        <li class="projects__grid-item">
+                            <img src="img/content/projects/example.jpg" class="project__background" />
+                            <div class="project__overlay">
+
+                            </div>
+                        </li>
+                        <li class="projects__grid-item">
+                            <img src="img/content/projects/giphyExample.gif" alt="Пример" width="100%" height="100%" class="project__background">
+                            <div class="project__overlay">
+
+                            </div>
+                        </li>
+
+                    </ul>
+
+
+                    <script type="text/javascript">
+                        // init Masonry after all images have loaded
+                        var $grid = $('.projects__grid').imagesLoaded(function() {
+                            $grid.masonry({
+                                itemSelector: '.projects__grid-item',
+                                percentPosition: true,
+                                columnWidth: '.projects__grid-sizer'
+                            });
                         });
-                    });
-                </script>
+                    </script>
+
+
+
+                </div>
 
 
 
             </div>
-
-
 
 
 
@@ -240,66 +282,85 @@
 
 
 
-        <section class="contact">
-            <div class="section__left-side">
-                <div class="contact__title">
-                    БУДЕМ НА СВЯЗИ
+        <section class="contact clearfix">
+
+            <div class="section__wrapper">
+
+                <div class="section__left-side">
+                    <div class="contact__title">
+                        БУДЕМ НА СВЯЗИ
+                    </div>
+
+                    <address class="contact__address">
+
+                <div class="contact__address-phone">
+                    <a href="tel: +79152208197" class="address__link">+7-915-220-81-97</a>
+                    <i class="fa fa-phone address__icon" aria-hidden="true"></i>
+                </div>
+                <div class="contact__address-mail">
+                    <a href="mailto:mr.romatur@gmail.com" class="address__link"> mr.romatur@gmail.com
+                    </a>
+                    <i class="fa fa-envelope address__icon" aria-hidden="true"></i>
+                </div>
+                <div class="contact__address-location">
+                    <a href="https://www.google.ru/maps/place/г.+Саров,+Нижегородская+обл./@54.9381898,43.2539247,12z/data=!3m1!4b1!4m13!1m7!3m6!1s0x4145f916ec166de1:0x811c65184cf5102e!2z0KHQsNGA0L7Qsiwg0J3QuNC20LXQs9C-0YDQvtC00YHQutCw0Y8g0L7QsdC7Lg!3b1!8m2!3d54.9342792!4d43.3252503!3m4!1s0x4145f91da79285b5:0x67e35081c25ed0fe!8m2!3d54.9342792!4d43.3252503" target="_blank" class="address__link">
+                            RUSSIA, SAROV
+                    </a>
+                    <i class="fa fa-map-marker address__icon" aria-hidden="true"></i>
                 </div>
 
-                <address class="contact__address">
+            </address>
 
-                        <div class="contact__address-phone">
-                            <a href="tel: +79152208197" class="address__link">+7-915-220-81-97</a>
-                            <i class="fa fa-phone address__icon" aria-hidden="true"></i>
-                        </div>
-                        <div class="contact__address-mail">
-                            <a href="mailto:mr.romatur@gmail.com" class="address__link"> mr.romatur@gmail.com
-                            </a>
-                            <i class="fa fa-envelope address__icon" aria-hidden="true"></i>
-                        </div>
-                        <div class="contact__address-location">
-                            <a href="https://www.google.ru/maps/place/г.+Саров,+Нижегородская+обл./@54.9381898,43.2539247,12z/data=!3m1!4b1!4m13!1m7!3m6!1s0x4145f916ec166de1:0x811c65184cf5102e!2z0KHQsNGA0L7Qsiwg0J3QuNC20LXQs9C-0YDQvtC00YHQutCw0Y8g0L7QsdC7Lg!3b1!8m2!3d54.9342792!4d43.3252503!3m4!1s0x4145f91da79285b5:0x67e35081c25ed0fe!8m2!3d54.9342792!4d43.3252503" target="_blank" class="address__link">
-                                    RUSSIA, SAROV
-                            </a>
-                            <i class="fa fa-map-marker address__icon" aria-hidden="true"></i>
-                        </div>
-
-                    </address>
-
-            </div>
-
-
-
-            <div class="section__right-side">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates voluptate quis tempora ipsum rerum veritatis ducimus consectetur consequuntur hic tenetur, nisi porro doloremque perspiciatis praesentium optio, similique enim, minima
-                    beatae.
-                </p>
-
-                <div class="form__wrapper">
-                    <form id="form-contact" method="POST" class="form-element" autocomplete="off">
-
-                        <p class="form-title">
-
-                        </p>
-                        <p class="form-message">
-
-                        </p>
-                        <input name="name" type="text" class="form-input__name" tabindex="0" placeholder="Your name" required>
-
-                        <input name="email" type="email" class="form-input__email" tabindex="0" placeholder="Your email" required>
-
-                        <textarea name="message" class="form-input__message" tabindex="0" pattern="" placeholder="Your message" required></textarea>
-
-                        <input name="theme" type="hidden" class="form-input__theme" value="Site-Portfolio">
-
-                        <div class="form-submit">
-                            <img class="g-recaptcha" src="img/reCaptcha.png" alt="">
-                            <!-- <div class="g-recaptcha" data-sitekey="6LddeTMUAAAAANHAEr5cwGm8YCDy-yD-et2gfvWN"></div> -->
-                            <input type="submit" class="form-input__button" value="SEND">
-
-                        </div>
-                    </form>
                 </div>
+
+
+
+                <div class="section__right-side">
+                    <div class="contact__text">
+                        <span class="contact__text-idea">
+                Возникла идея?
+            </span>
+                        <span class="contact__text-need">
+                Нужен программист для сотрудничества?
+            </span>
+
+                        <p class="contact__text-telegram">
+                            <span class="text-telegram__bot">Telegram_bot</span> с удовольствием доставит мне ваше сообщение чтобы мы могли связаться.
+                        </p>
+                        <div class="contact__telegram-icon">
+                            <i class="fa fa-telegram" aria-hidden="true"></i>
+                        </div>
+                    </div>
+
+
+
+                    <div class="form__wrapper">
+                        <form id="form-contact" method="POST" class="form-element" autocomplete="off">
+
+                            <p class="form-title">
+
+                            </p>
+                            <p class="form-message">
+
+                            </p>
+                            <input name="name" type="text" class="form-input__name" tabindex="0" placeholder="Your name" required>
+
+                            <input name="email" type="email" class="form-input__email" tabindex="0" placeholder="Your email" required>
+
+                            <textarea name="message" class="form-input__message" tabindex="0" pattern="" placeholder="Your message" required></textarea>
+
+                            <input name="theme" type="hidden" class="form-input__theme" value="Site-Portfolio">
+
+                            <div class="form-submit">
+                                <!-- <img class="g-recaptcha" src="img/reCaptcha.png" alt=""> -->
+                                <!-- <div class="g-recaptcha" data-sitekey="6LddeTMUAAAAANHAEr5cwGm8YCDy-yD-et2gfvWN" data-size="compact"></div> -->
+                                <input type="submit" class="form-input__button" value="ОТПРАВИТЬ">
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
             </div>
 
         </section>
@@ -314,13 +375,11 @@
         <footer class="footer">
 
 
-                    © 2017 Турусов Роман.
-
-
+            © 2017 Турусов Роман.
 
         </footer>
-    </div>
-    <!--
+        </div>
+        <!--
             <section class="resume">
                 <div class="section__left-side">
                     <div class="resume__title">

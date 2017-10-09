@@ -50,7 +50,17 @@ ul {
 
 section {
     width: 100%;
+    // max-width: 1800px;
+    // margin: 0 auto;
 }
+
+.section__wrapper{
+    max-width: 1440px;
+    display: block;
+    margin: 0 auto;
+}
+
+
 
 * {
     transition: 0.2s;
@@ -292,6 +302,7 @@ section {
     border-radius: 50%;
     float: right;
     // margin-right: 5px;
+    // transform: scale(-1, 1);
     border: 2px solid @color__two;
 }
 
@@ -313,15 +324,24 @@ section {
 }
 
 .about__desc {
-    font-size: 20px;
+    font-size: 18px;
     margin: 0 0 20px;
+    width: 90%;
+}
+
+.about__desc-title {
+    font-size: 14px;
+    font-weight: 300;
 }
 
 .about__quote {
     margin-bottom: 20px;
-    font-size: 18px;
+    font-size: 16px;
     color: @color__two;
     font-style: italic;
+    width: 80%;
+    margin-left: 20%;
+    display: inline-block;
 }
 
 .about__quote-text {}
@@ -330,27 +350,104 @@ section {
     text-align: right;
     display: block;
 }
-@media @phone {
-    .about {
-        padding: 40px 30px;
-    }
 
-    .section__left-side {
-        width: 100%;
-    }
+.about__education {
+    display: block;
 
-    .section__right-side {
-        width: 100%;
-        border: none;
-        padding: 0;
-    }
-
-    .about__avatar-image {
-        float: none;
-        display: inline-block;
-        text-align: center;
-    }
 }
+
+.education-miet {
+    width: 100%;
+
+}
+
+.education-miet__title {
+    width: 110px;
+    font-size: 18px;
+    padding: 5px 20px;
+    background-color: @color__two;
+    color: @color__one;
+    font-style: italic;
+    display: block;
+    text-align: center;
+    margin: 0 0 20px 30px;
+}
+
+.education-miet__desc {
+    width: 49%;
+    vertical-align: middle;
+    display: inline-block;
+
+}
+
+.education-miet__image {
+    width: 49%;
+    max-width: 400px;
+    display: inline-block;
+    vertical-align: middle;
+
+}
+
+.education-knowledge {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.education-knowledge__title {
+    width: 190px;
+    font-size: 18px;
+    padding: 5px 20px;
+    background-color: @color__two;
+    color: @color__one;
+    font-style: italic;
+    display: block;
+    float: right;
+    text-align: center;
+    margin: 0 50px 20px 50%;
+    // &::after{
+    //     content: '';
+    //     width: 100%;
+    //     height: 1px;
+    //     clear: both;
+    //     display: block;
+    // }
+}
+
+.education-knowledge__desc {
+    width: 70%;
+    vertical-align: top;
+    display: inline-block;
+    float: right;
+}
+
+.education-knowledge__image {
+    margin-top: 20px;
+    max-width: 100px;
+    width: 20%;
+    display: inline-block;
+
+}
+// @media @phone {
+//     .about {
+//         padding: 40px 30px;
+//     }
+//
+//     .section__left-side {
+//         width: 100%;
+//     }
+//
+//     .section__right-side {
+//         width: 100%;
+//         border: none;
+//         padding: 0;
+//     }
+//
+//     .about__avatar-image {
+//         float: none;
+//         display: inline-block;
+//         text-align: center;
+//     }
+// }
 ////////////РЕЗЮМЕ////////////
 //
 // .resume {
@@ -687,12 +784,12 @@ section {
     width: 66.6666%;
 }
 /////////КОНТАКТЫ/////////
+
 .contact {
     padding: 100px 5%;
     position: relative;
     display: inline-block;
     width: 100%;
-
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -707,7 +804,6 @@ section {
     font-size: 48px;
     font-weight: 100;
     color: @color__two;
-
 }
 
 .contact__address {
@@ -718,11 +814,9 @@ section {
     font-weight: 100;
     margin-top: 100px;
     color: @color__two;
-
-
 }
 
-.address__link{
+.address__link {
     display: inline-block;
     color: @color__two;
     text-decoration: none;
@@ -737,13 +831,64 @@ section {
     }
 }
 
-.address__icon{
+.address__icon {
     display: inline-block;
     width: 20px;
     text-align: center;
 }
 
+.contact__text {
+    width: 90%;
+}
 
+.contact__text-idea {
+    font-size: 18px;
+    display: block;
+    margin: 10px 20% 10px 0;
+    text-align: right;
+}
+
+.contact__text-need {
+    font-size: 22px;
+    display: block;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.contact__text-telegram {
+    margin-top: 30px;
+    font-size: 18px;
+    display: block;
+    width: 82%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.text-telegram__bot{
+// text-decoration: underline;
+background-color: fade(@color__two,90%);
+color: @color__one;
+font-weight: 400;
+padding: 3px;
+line-height: 25px;
+}
+.contact__telegram-icon{
+    font-size: 50px;
+    line-height: 38px;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: darken(@color__two, 20%);
+    color: @color__one;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    i{
+        position: absolute;
+        top: -5px;
+        left: -5px;
+    }
+}
 
 
 .contactForm {
@@ -755,14 +900,6 @@ section {
     font-size: 18px;
     font-weight: 100;
     color: black;
-
-    p {
-        width: 90%;
-    }
-
-    div {
-        margin-bottom: 10px;
-    }
 }
 
 .form-submit {
@@ -772,12 +909,14 @@ section {
 
     input {
         float: left;
-        width: 49.5%;
+        // width: 49.5%;
+        width: 100%;
         display: block;
         margin: 0;
         border: none;
-        padding: 15px;
-        background: @mainColor;
+        padding: 10px;
+        font-size: 20px;
+        background: @color__two;
         // color: #fff;
         font-weight: 700;
         cursor: pointer;
@@ -804,7 +943,7 @@ section {
     box-sizing: border-box;
     width: 100%;
     margin-bottom: 10px;
-    font-size: 1rem;
+    // font-size: 1em;
     padding: 15px;
     border: none;
     // border-bottom: 4px solid @mainColor;
@@ -812,16 +951,13 @@ section {
     // color: @color__two;
     // background-color: lighten(@color__three, 50%);
     font-family: ExoTwo,sans-serif;
-
-
 }
 
 .form-input__email,
 .form-input__name {
     width: 49.5%;
-    border-top: 1px solid fade(@color__two, 50%);
-border-bottom: 1px solid fade(@color__two, 50%);
-
+    border-top: 1px solid fade(@color__two, 60%);
+    border-bottom: 1px solid fade(@color__two, 60%);
 }
 
 .form-input__email {
@@ -830,43 +966,40 @@ border-bottom: 1px solid fade(@color__two, 50%);
 
 .form-input__message {
     height: 20vh;
-    border-top: 1px solid fade(@color__two, 50%);
-border-bottom: 1px solid fade(@color__two, 50%);
+    border-top: 1px solid fade(@color__two, 60%);
+    border-bottom: 1px solid fade(@color__two, 60%);
 }
 
 .form-input__email:focus,
+.form-input__message:focus,
 .form-input__name:focus {
-    // border: 1px solid #90caf9;
+    border-top: 1px solid @color__two;
+    border-bottom: 1px solid @color__two;
 }
+//
+// .psdResume {
+//     width: 100vw;
+//     height: 50vh;
+// }
+//
+// .map {
+//     width: 100vw;
+//     height: 40vh;
+//     display: none;
+// }
 
-.aboutMeTitle,
-.contactTitle,
-.resumeTitle {
-    span:last-of-type {
-        display: none;
-    }
+.g-recaptcha {
+    // width: 50px;
+    float: right;
 }
-
-.psdResume {
-    width: 100vw;
-    height: 50vh;
-}
-
-.map {
-    width: 100vw;
-    height: 40vh;
-    display: none;
-}
-
-
 
 .footer {
-    &::before {
-        content: '';
-        display: inline-block;
-        height: 100%;
-        vertical-align: middle;
-    }
+    // &::before {
+    //     content: '';
+    //     display: inline-block;
+    //     height: 100%;
+    //     vertical-align: middle;
+    // }
     width: 100vw;
     font-size: 18px;
     line-height: 44px;
@@ -875,17 +1008,11 @@ border-bottom: 1px solid fade(@color__two, 50%);
     width: 100%;
     background-color: rgb(60, 38, 75);
     font-family: 'Exo 2', sans-serif;
-    position: absolute;
-
-
-        display: inline-block;
-        vertical-align: middle;
-        text-align: center;
-        color: white;
-        font-weight: 100;
-        // margin-bottom: 15%;
-        // width: 20%;
-
+    text-align: center;
+    color: white;
+    font-weight: 100;
+    // margin-bottom: 15%;
+    // width: 20%;
 }
 /////////////////////////
 /////////////////////////
