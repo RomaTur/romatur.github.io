@@ -402,6 +402,7 @@ article {
 
 .education-knowledge__image {
     margin-top: 20px;
+    margin-bottom: 50px;
     max-width: 100px;
     width: 20%;
     display: inline-block;
@@ -434,11 +435,38 @@ article {
     list-style: none;
     width: 100%;
     float: right;
-
+    display: inline-block;
+    *{
+        transition: 0;
+    }
 }
 .education-knowledge__item{
     margin: 5px 0;
 }
+
+
+ul.akkordeon1 li {}
+
+ul.akkordeon1 li>p {
+    cursor: pointer;
+    padding: 10px 10px;
+    margin: 0;
+    color: @color__two;
+    text-align: center;
+    font-size: 12px;
+    font-family: sans-serif;
+
+}
+
+ul.akkordeon1 li>div {
+    
+    padding: 10px;
+    font-size: 11px;
+    line-height: 15px;
+
+}
+
+
 // @media @phone {
 //     .about {
 //         padding: 40px 30px;
