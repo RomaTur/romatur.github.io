@@ -6,13 +6,11 @@
     font-family: ExoTwo;
     src: url("../fonts/Exo_2/Exo2-ExtraLight.ttf");
 }
- // Mode: Phone
+// Mode: Phone
 @phone: ~"(max-width: 767px)";
-@article__vertical-line--phone: 100%;
-// Mode: Tablet
+@article__vertical-line--phone: 100%; // Mode: Tablet
 @tablet: ~"(min-width: 768px) and (max-width: 1024px)";
-@article__vertical-line--tablet: 40%;
-// Mode: Desktop
+@article__vertical-line--tablet: 40%; // Mode: Desktop
 @desktop: ~"(min-width: 1025px)";
 @article__vertical-line: 30%;
 @color__one: white;
@@ -259,7 +257,7 @@ article {
 }
 
 .section__right-side {
-    width: 45%;
+    width: 50%;
     float: left;
     border-left: 4px solid @color__two;
     padding-left: 30px;
@@ -383,8 +381,9 @@ article {
     display: inline-block;
     list-style: none;
 }
-.education-miet__item{
-    margin: 10px 0;
+
+.education-miet__item {
+    margin: 20px 0;
 }
 
 .education-miet__image {
@@ -397,14 +396,13 @@ article {
 .education-knowledge {
     width: 100%;
     margin-top: 30px;
-
 }
 
 .education-knowledge__image {
     margin-top: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 150px;
     max-width: 100px;
-    width: 20%;
+    max-width: 20%;
     display: inline-block;
     float: left;
 }
@@ -428,45 +426,109 @@ article {
     float: right;
     text-align: center;
     margin: 0 50px 20px 50%;
-
 }
 
-.education-knowledge__tech{
+.education-knowledge__accordeon {
     list-style: none;
     width: 100%;
     float: right;
     display: inline-block;
-    *{
-        transition: 0;
+    margin-top: 10px;
+
+    * {
+        transition: 0s;
     }
+    border-bottom: 1px solid @color__two;
+    // max-height: 350px;
 }
-.education-knowledge__item{
-    margin: 5px 0;
+
+.accordeon__item {
+    border-top: 1px solid @color__two;
+
+    .fa-chevron-right {
+
+
+        transition: 0.3s;
+// display: inline-block;
+        font-size: 14px;
+
+    }
+
+    &--active {
+        .fa-chevron-right {
+            transform: scale(-1,1);
+        }
+    }
+    .fa{
+        width: 30px;
+        text-align: center;
+    }
+    .fa-microchip{
+        position: absolute;
+        top: 31%;
+        left: 5%;
+        font-size: 24px;
+    }
+    .fa-desktop{
+        position: absolute;
+        top: 31%;
+        left: 5%;
+        font-size: 24px;
+    }
+    .fa-camera{
+        position: absolute;
+        top: 31%;
+        left: 5%;
+        font-size: 24px;
+    }
+
+
+
 }
 
+.accordeon-title__text{
+    width: 70%;
+}
+.accordeon-title__fa-container{
+    transform: rotate(90deg);
+    position: absolute;
+    top: 40%;
+    right: 5%;
+}
+.accordeon__item-desc {
+    display: none;
+    padding: 10px;
+    font-size: 14px;
+    line-height: 15px;
+    // height: 200px;
+}
 
-ul.akkordeon1 li {}
+.accordeon__item-title {
 
-ul.akkordeon1 li>p {
     cursor: pointer;
-    padding: 10px 10px;
+    padding: 20px 5px;
     margin: 0;
     color: @color__two;
     text-align: center;
-    font-size: 12px;
-    font-family: sans-serif;
+    font-size: 16px;
+    transition: 0.3s;
+    text-transform: uppercase;
+    position: relative;
+    >*{
+        display: inline-block;
+        // margin: 0 5px;
+        // vertical-align: middle;
+    }
 
 }
 
-ul.akkordeon1 li>div {
-    
-    padding: 10px;
-    font-size: 11px;
-    line-height: 15px;
-
+.font-weight-2 {
+    font-weight: 200;
 }
 
-
+.font-weight-3 {
+    font-weight: 300;
+}
 // @media @phone {
 //     .about {
 //         padding: 40px 30px;
@@ -602,7 +664,7 @@ ul.akkordeon1 li>div {
     background-size: 18%;
     width: 100%;
     color: @color__two;
-    background: linear-gradient(228deg, #382a3a, #59505a, #564658, #352636);
+    background: linear-gradient(228deg, #493b4b, #59505a, #564658, #352636);
     background-size: 800% 800%;
     -webkit-animation: AnimationName 16s ease infinite;
     -moz-animation: AnimationName 16s ease infinite;
@@ -1013,9 +1075,13 @@ ul.akkordeon1 li>div {
     border: none;
     // border-bottom: 4px solid @color__two;
     outline: none;
-    // color: @color__two;
-    // background-color: lighten(@color__three, 50%);
+    color: @color__two;
+    background-color: fade(@color__two, 5%);
     font-family: ExoTwo,sans-serif;
+
+    &::placeholder {
+        color: fade(@color__three, 60%);
+    }
 }
 
 .form-input__email,
