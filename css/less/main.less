@@ -1,6 +1,7 @@
 // out: ../main.css, compress: true
 //telegramForm
 @import url(../telegramform/css/style.css);
+
 @import url( 'https://fonts.googleapis.com/css?family=Exo+2:100,200,200i,300,400');
 @font-face {
     font-family: ExoTwo;
@@ -23,33 +24,13 @@ header,
 html {
     background: lighten(@color__two, 10%);
     margin: 0;
-    width: 100vw;
     overflow-x: hidden;
 }
+@import url(basic.less);
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin: 0;
-    padding: 0;
-}
-
-a {
-    display: block;
-}
-
-ul {
-    margin: 0;
-    padding: 0;
-}
 
 article {
     width: 100%;
-    // max-width: 1800px;
-    // margin: 0 auto;
 }
 
 .section__wrapper {
@@ -61,8 +42,7 @@ article {
 * {
     transition: 0.2s;
     font-family: 'Exo 2', ExoTwo;
-    font-weight: 100;
-    box-sizing: border-box;
+    font-weight: 200;
 }
 ///////////ШАПКА///////////
 
@@ -437,19 +417,17 @@ article {
 
     * {
         transition: 0s;
+
     }
     border-bottom: 1px solid @color__two;
-    // max-height: 350px;
+
 }
 
 .accordeon__item {
     border-top: 1px solid @color__two;
 
     .fa-chevron-right {
-
-
         transition: 0.3s;
-// display: inline-block;
         font-size: 14px;
 
     }
@@ -521,6 +499,35 @@ article {
     }
 
 }
+
+
+.accordeon__scheme{
+    list-style: none;
+}
+
+.accordeon__scheme-item{
+    text-align: center;
+}
+
+.accordeon__web{
+    list-style: none;
+}
+
+.accordeon__web-item{
+    text-align: center;
+}
+
+.accordeon__media{
+    list-style: none;
+}
+
+.accordeon__media-item{
+    text-align: center;
+}
+
+
+
+
 
 .font-weight-2 {
     font-weight: 200;
@@ -978,18 +985,22 @@ article {
     display: block;
     margin-left: 10px;
     text-align: center;
+    margin-bottom: 30px;
 }
 
 .contact__text-telegram {
-    margin-top: 30px;
+    // margin-top: 30px;
     font-size: 18px;
     display: block;
-    width: 82%;
-    display: inline-block;
-    vertical-align: middle;
+
 }
 
-.text-telegram__bot {
+.telegram__paragraph-text{
+    display: inline-block;
+    vertical-align: middle;
+    width: 80%;
+}
+.telegram__bot-text {
     // text-decoration: underline;
     background-color: fade(@color__two,90%);
     color: @color__one;
@@ -1010,6 +1021,8 @@ article {
     display: inline-block;
     vertical-align: middle;
     position: relative;
+    margin-left: 5%;
+    // float: right;
 
     i {
         position: absolute;
@@ -1018,6 +1031,12 @@ article {
     }
 }
 
+
+.form__wrapper{
+
+    margin-top: 30px;
+
+}
 .contactForm {
     float: left;
     width: 45%;
@@ -1099,6 +1118,7 @@ article {
     height: 20vh;
     border-top: 1px solid fade(@color__two, 60%);
     border-bottom: 1px solid fade(@color__two, 60%);
+    resize: none;
 }
 
 .form-input__email:focus,
