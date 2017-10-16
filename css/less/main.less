@@ -1,7 +1,6 @@
 // out: ../main.css, compress: true
 //telegramForm
 @import url(../telegramform/css/style.css);
-
 @import url( 'https://fonts.googleapis.com/css?family=Exo+2:100,200,200i,300,400');
 @font-face {
     font-family: ExoTwo;
@@ -10,9 +9,11 @@
 // Mode: Phone
 @phone: ~"(max-width: 767px)";
 @article__vertical-line--phone: 100%; // Mode: Tablet
-@tablet: ~"(min-width: 768px) and (max-width: 1024px)";
-@article__vertical-line--tablet: 40%; // Mode: Desktop
-@desktop: ~"(min-width: 1025px)";
+@tablet: ~"(min-width: 768px) and (max-width: 998px)";
+@article__vertical-line--tablet: 40%;
+@laptop: ~"(min-width: 998px) and (max-width: 1199px)";
+// Mode: Desktop
+@desktop: ~"(min-width: 1200px)";
 @article__vertical-line: 30%;
 @color__one: white;
 @color__two: #b668db;
@@ -27,7 +28,6 @@ html {
     overflow-x: hidden;
 }
 @import url(basic.less);
-
 
 article {
     width: 100%;
@@ -380,7 +380,7 @@ article {
 
 .education-knowledge__image {
     margin-top: 20px;
-    margin-bottom: 150px;
+    margin-bottom: 210px;
     max-width: 100px;
     max-width: 20%;
     display: inline-block;
@@ -417,10 +417,8 @@ article {
 
     * {
         transition: 0s;
-
     }
     border-bottom: 1px solid @color__two;
-
 }
 
 .accordeon__item {
@@ -429,7 +427,6 @@ article {
     .fa-chevron-right {
         transition: 0.3s;
         font-size: 14px;
-
     }
 
     &--active {
@@ -437,42 +434,45 @@ article {
             transform: scale(-1,1);
         }
     }
-    .fa{
+
+    .fa {
         width: 30px;
         text-align: center;
     }
-    .fa-microchip{
-        position: absolute;
-        top: 31%;
-        left: 5%;
-        font-size: 24px;
-    }
-    .fa-desktop{
-        position: absolute;
-        top: 31%;
-        left: 5%;
-        font-size: 24px;
-    }
-    .fa-camera{
+
+    .fa-microchip {
         position: absolute;
         top: 31%;
         left: 5%;
         font-size: 24px;
     }
 
+    .fa-desktop {
+        position: absolute;
+        top: 31%;
+        left: 5%;
+        font-size: 24px;
+    }
 
-
+    .fa-camera {
+        position: absolute;
+        top: 31%;
+        left: 5%;
+        font-size: 24px;
+    }
 }
 
-.accordeon-title__text{
+.accordeon-title__text {
     width: 70%;
 }
-.accordeon-title__fa-container{
+
+.accordeon-title__fa-container {
     transform: rotate(90deg);
     position: absolute;
     top: 40%;
     right: 5%;
 }
+
 .accordeon__item-desc {
     display: none;
     padding: 10px;
@@ -482,7 +482,6 @@ article {
 }
 
 .accordeon__item-title {
-
     cursor: pointer;
     padding: 20px 5px;
     margin: 0;
@@ -492,42 +491,40 @@ article {
     transition: 0.3s;
     text-transform: uppercase;
     position: relative;
-    >*{
+
+    > * {
         display: inline-block;
         // margin: 0 5px;
         // vertical-align: middle;
     }
-
 }
 
-
-.accordeon__scheme{
+.accordeon__scheme {
     list-style: none;
 }
 
-.accordeon__scheme-item{
-    text-align: center;
+.accordeon__scheme-item {
+    text-align: left;
+    padding: 3px 15%;
 }
 
-.accordeon__web{
+.accordeon__web {
     list-style: none;
 }
 
-.accordeon__web-item{
-    text-align: center;
+.accordeon__web-item {
+    text-align: left;
+    padding: 3px 15%;
 }
 
-.accordeon__media{
+.accordeon__media {
     list-style: none;
 }
 
-.accordeon__media-item{
-    text-align: center;
+.accordeon__media-item {
+    text-align: left;
+    padding: 3px 15%;
 }
-
-
-
-
 
 .font-weight-2 {
     font-weight: 200;
@@ -869,21 +866,42 @@ article {
 .projects__grid-item,
 .projects__grid-sizer {
     width: 33.3333%;
+    font-size: 1vw;
+}
+
+.projects__grid-item--width2 {
+    width: 66.6666%;
+    font-size: 1.6vw;
 }
 
 .projects__grid-item {
     float: left;
-    padding: 5px;
+    padding: 10px;
+    // p {
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 50%;
+    //     transform: translate(-50%, -50%);
+    //     font-size: 2vw;
+    //     text-align: center;
+    //     padding: 0;
+    //     margin: 0;
+    // }
+}
 
-    p {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 2vw;
-        text-align: center;
-        padding: 0;
-        margin: 0;
+.project__wrapper {
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    font-size: inherit;
+    transition: 0.4s;
+    &:hover {
+        cursor: pointer;
+
+        .project__desc {
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
     }
 }
 
@@ -893,30 +911,25 @@ article {
     height: 100%;
 }
 
-.project__overlay {
+.project__desc {
     position: absolute;
-    // display: none;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 99%;
-    height: 99%;
+    top: 0;
+    left: -60%;
+    width: 60%;
+    height: 100%;
     text-align: center;
-    // padding: 2px;
-    margin: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-
-    &:hover {
-        background-color: rgba(0, 0, 0, 0.8);
-        // padding:5px;
-    }
+    background-color: rgba(0, 0, 0, 0.0);
+    font-size: 2em;
+    padding: 10px;
+    display: block;
+    margin: auto;
 }
 
-.projects__grid-item--width2 {
-    width: 66.6666%;
+
+.slider{
+    height: 500px;
 }
 /////////КОНТАКТЫ/////////
-
 .contact {
     padding: 100px 5%;
     position: relative;
@@ -992,14 +1005,14 @@ article {
     // margin-top: 30px;
     font-size: 18px;
     display: block;
-
 }
 
-.telegram__paragraph-text{
+.telegram__paragraph-text {
     display: inline-block;
     vertical-align: middle;
     width: 80%;
 }
+
 .telegram__bot-text {
     // text-decoration: underline;
     background-color: fade(@color__two,90%);
@@ -1023,7 +1036,6 @@ article {
     position: relative;
     margin-left: 5%;
     // float: right;
-
     i {
         position: absolute;
         top: -5px;
@@ -1031,12 +1043,10 @@ article {
     }
 }
 
-
-.form__wrapper{
-
+.form__wrapper {
     margin-top: 30px;
-
 }
+
 .contactForm {
     float: left;
     width: 45%;
