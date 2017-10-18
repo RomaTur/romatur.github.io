@@ -25,12 +25,36 @@ header,
 html {
     background: lighten(@color__two, 10%);
     margin: 0;
+    width: 100vw;
     overflow-x: hidden;
 }
-@import url(basic.less);
 
+<<<<<<< HEAD
+=======
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    display: block;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+>>>>>>> parent of efa24d4... adding content to accordeon
 article {
     width: 100%;
+    // max-width: 1800px;
+    // margin: 0 auto;
 }
 
 .section__wrapper {
@@ -42,7 +66,8 @@ article {
 * {
     transition: 0.2s;
     font-family: 'Exo 2', ExoTwo;
-    font-weight: 200;
+    font-weight: 100;
+    box-sizing: border-box;
 }
 ///////////ШАПКА///////////
 
@@ -419,13 +444,20 @@ article {
         transition: 0s;
     }
     border-bottom: 1px solid @color__two;
+<<<<<<< HEAD
+=======
+    // max-height: 350px;
+>>>>>>> parent of efa24d4... adding content to accordeon
 }
 
 .accordeon__item {
     border-top: 1px solid @color__two;
 
     .fa-chevron-right {
+
+
         transition: 0.3s;
+// display: inline-block;
         font-size: 14px;
     }
 
@@ -499,6 +531,7 @@ article {
     }
 }
 
+<<<<<<< HEAD
 .accordeon__scheme {
     list-style: none;
 }
@@ -526,6 +559,8 @@ article {
     padding: 3px 15%;
 }
 
+=======
+>>>>>>> parent of efa24d4... adding content to accordeon
 .font-weight-2 {
     font-weight: 200;
 }
@@ -892,9 +927,10 @@ article {
 .project__wrapper {
     position: relative;
     overflow: hidden;
-    background-color: rgb(0, 0, 0);
+    // background-color: rgb(0, 0, 0);
     font-size: inherit;
     transition: 0.4s;
+
     &:hover {
         cursor: pointer;
 
@@ -909,6 +945,39 @@ article {
     display: block;
     width: 100%;
     height: 100%;
+    // z-index: 20;
+}
+.main-carousel{
+    height: (100vw - 2*@article__vertical-line)*0.8;
+    *{
+        transition: 0s;
+    }
+}
+.carousel-cell {
+  width: 100%; /* full width */
+  // height: 160px; /* height of carousel */
+  margin-right: 10px;
+}
+
+/* big buttons, no circle */
+.flickity-prev-next-button {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+}
+.flickity-prev-next-button:hover {
+  background: transparent;
+}
+/* arrow color */
+.flickity-prev-next-button .arrow {
+  fill: white;
+}
+.flickity-prev-next-button.no-svg {
+  color: white;
+}
+/* hide disabled button */
+.flickity-prev-next-button:disabled {
+  display: none;
 }
 
 .project__desc {
@@ -927,7 +996,7 @@ article {
 
 
 .slider{
-    height: 500px;
+    height: 20vw;
 }
 /////////КОНТАКТЫ/////////
 .contact {
@@ -998,22 +1067,28 @@ article {
     display: block;
     margin-left: 10px;
     text-align: center;
-    margin-bottom: 30px;
 }
 
 .contact__text-telegram {
-    // margin-top: 30px;
+    margin-top: 30px;
     font-size: 18px;
     display: block;
+<<<<<<< HEAD
 }
 
 .telegram__paragraph-text {
+=======
+    width: 82%;
+>>>>>>> parent of efa24d4... adding content to accordeon
     display: inline-block;
     vertical-align: middle;
-    width: 80%;
 }
 
+<<<<<<< HEAD
 .telegram__bot-text {
+=======
+.text-telegram__bot {
+>>>>>>> parent of efa24d4... adding content to accordeon
     // text-decoration: underline;
     background-color: fade(@color__two,90%);
     color: @color__one;
@@ -1034,8 +1109,12 @@ article {
     display: inline-block;
     vertical-align: middle;
     position: relative;
+<<<<<<< HEAD
     margin-left: 5%;
     // float: right;
+=======
+
+>>>>>>> parent of efa24d4... adding content to accordeon
     i {
         position: absolute;
         top: -5px;
@@ -1043,10 +1122,13 @@ article {
     }
 }
 
+<<<<<<< HEAD
 .form__wrapper {
     margin-top: 30px;
 }
 
+=======
+>>>>>>> parent of efa24d4... adding content to accordeon
 .contactForm {
     float: left;
     width: 45%;
@@ -1128,7 +1210,6 @@ article {
     height: 20vh;
     border-top: 1px solid fade(@color__two, 60%);
     border-bottom: 1px solid fade(@color__two, 60%);
-    resize: none;
 }
 
 .form-input__email:focus,
@@ -1164,14 +1245,10 @@ article {
     width: 100vw;
     font-size: 18px;
     line-height: 44px;
-    text-align: center;
-    // height: 10vh;
     width: 100%;
     background-color: rgb(60, 38, 75);
-    font-family: 'Exo 2', sans-serif;
     text-align: center;
     color: white;
-    font-weight: 100;
     // margin-bottom: 15%;
     // width: 20%;
 }

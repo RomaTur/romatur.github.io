@@ -16,14 +16,14 @@
     <link rel="stylesheet" href="lib/normalize.css">
 
     <link rel="stylesheet" href="lib/hover-min.css">
-    <link rel="stylesheet" href="lib/bxslider/css/jquery.bxslider.css">
+    <link rel="stylesheet" href="lib/flickity/flickity.min.css">
     <link rel="stylesheet" href="fonts/fontAwesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
 
     <script src="lib/jquery-3.2.1.min.js"></script>
     <script src="lib/masonry.pkgd.min.js"></script>
     <script src="lib/imagesloaded.pkgd.min.js"></script>
-    <script src="lib/bxslider/js/jquery.bxslider.js" charset="utf-8"></script>
+    <script src="lib/flickity/flickity.pkgd.min.js" charset="utf-8"></script>
     <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
@@ -174,7 +174,30 @@
                         <img src="img/content/about/student.png" alt="Student" class="education-knowledge__image">
                         <div class="education-knowledge__desc">
                             <span class="education-knowledge__title">Знания и навыки</span>
+                            <!-- <ul class="education-knowledge__tech">
 
+                                <li class="education-knowledge__item">
+                                    язык разметки HTML(5)
+                                </li>
+                                <li class="education-knowledge__item">
+                                    таблицы стилей CSS(3)
+                                </li>
+                                <li class="education-knowledge__item">
+                                    препроцессоры (sass, less)
+                                </li>
+                                <li class="education-knowledge__item">
+                                    адаптивная верстка под <br>мобильные устройства
+                                </li>
+                                <li class="education-knowledge__item">
+                                    фреймворк Bootstrap, p5.js
+                                </li>
+                                <li class="education-knowledge__item">
+                                    язык программирования Javascript
+                                </li>
+                                <li class="education-knowledge__item">
+                                    библиотека jQuery
+                                </li>
+                            </ul> -->
 
 
                             <ul class="education-knowledge__accordeon">
@@ -187,6 +210,7 @@
                                             <i class="fa fa-chevron-right "></i>
                                         </div>
                                     </div>
+<<<<<<< HEAD
 
                                     <ul class="accordeon__item-desc accordeon__scheme" style="display: none;">
 
@@ -210,6 +234,11 @@
 
                                     </ul>
 
+=======
+                                    <div class="accordeon__item-desc" style="display: none;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id doloribus hic natus, earum quo assumenda quae saepe dolor praesentium dolore quasi est sed accusamus, aspernatur possimus amet beatae eius accusantium! Lorem
+                                        ipsum dolor sit amet, consectetur adipisicing elit. Quam animi dicta aperiam dolorum. Aliquam molestiae alias porro obcaecati tempore iste fugiat culpa autem, accusamus soluta natus reprehenderit, repellendus nam
+                                        nobis.</div>
+>>>>>>> parent of efa24d4... adding content to accordeon
                                 </li>
                                 <li class="accordeon__item">
                                     <div class="accordeon__item-title">
@@ -220,6 +249,7 @@
                                             <i class="fa fa-chevron-right "></i>
                                         </div>
                                     </div>
+<<<<<<< HEAD
                                     <ul class="accordeon__item-desc accordeon__web" style="display: none;">
 
                                         <li class="accordeon__web-item">
@@ -258,6 +288,12 @@
 
 
                                     </ul>
+=======
+                                    <div class="accordeon__item-desc" style="display: none;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus iste enim ex soluta ipsum autem, temporibus nobis accusantium excepturi nemo assumenda minus cumque et adipisci sapiente, facere. Minima, officia
+                                        aliquid? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsum at in dolor alias praesentium, architecto eligendi officia. Et, voluptatibus, dolore! Ex ipsa nihil dolores! Et veniam, dicta ab delectus. Mollitia atque dolores, nisi quibusdam. Quis commodi numquam, officia ad molestias vero nobis repellendus sit provident odio dignissimos obcaecati, dolorem optio porro qui explicabo, facere amet in itaque quisquam!
+                                            Modi.
+                                    </div>
+>>>>>>> parent of efa24d4... adding content to accordeon
                                 </li>
                                 <li class="accordeon__item">
                                     <div class="accordeon__item-title">
@@ -268,6 +304,7 @@
                                         </div>
                                         <!-- <i class="fa fa-chevron-right "></i> -->
                                     </div>
+<<<<<<< HEAD
                                     <ul class="accordeon__item-desc accordeon__media" style="display: none;">
 
                                         <li class="accordeon__media-item">
@@ -280,6 +317,11 @@
 
 
                                     </ul>
+=======
+                                    <div class="accordeon__item-desc" style="display: none;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At amet beatae obcaecati dicta, iusto aliquam, ipsa animi maiores assumenda quibusdam dolorum praesentium dignissimos, libero, officia error labore pariatur
+                                        voluptatibus optio.
+                                    </div>
+>>>>>>> parent of efa24d4... adding content to accordeon
                                 </li>
 
                             </ul>
@@ -293,6 +335,7 @@
 
 
                     </div>
+
 
                 </section>
 
@@ -309,11 +352,7 @@
                         ПОДЕЛКИ
                     </div>
                 </div> -->
-                <script>
-  $(document).ready(function(){
-    $('.slider').bxSlider();
-  });
-</script>
+
 
                 <section class="section__row">
                     <div class="section__row-line section__row-line_up">
@@ -326,18 +365,31 @@
                         <div class="projects__grid-sizer"></div>
 
                         <li class="projects__grid-item projects__grid-item--width2">
-                            <div class="project__wrapper">
-                                <div class="slider">
-                                    <div>
+                            <ul class="project__wrapper">
+
+                                <div class="main-carousel">
+                                    <li class="carousel-cell">
                                         <img src="img/content/projects/example.jpg" class="project__background" />
-                                    </div>
-                                    <div>
+                                    </li>
+                                    <li class="carousel-cell">
                                         <img src="img/content/projects/example.jpg" class="project__background" />
-                                    </div>
+                                    </li>
+                                    <li class="carousel-cell">
+                                        <img src="img/header/macbookFullHD.jpg" class="project__background" />
+                                    </li>
                                     <!-- <div class="project__desc">Волновой алгоритм</div> -->
                                 </div>
 
-                            </div>
+                                <script type="text/javascript">
+                                    $('.main-carousel').flickity({
+                                        // options
+                                        cellSelector: '.carousel-cell',
+                                        imagesLoaded: true,
+                                        wrapAround: true
+                                    });
+                                </script>
+
+                            </ul>
 
                         </li>
 
@@ -470,15 +522,12 @@
                 Нужен программист для сотрудничества?
             </span>
 
-                        <div class="contact__text-telegram">
-                            <p class="telegram__paragraph-text">
-                                <span class="telegram__bot-text">Telegram_bot</span> с удовольствием доставит мне ваше сообщение чтобы мы могли связаться.
-                            </p>
-                            <div class="contact__telegram-icon">
-                                <i class="fa fa-telegram" aria-hidden="true"></i>
-                            </div>
+                        <p class="contact__text-telegram">
+                            <span class="text-telegram__bot">Telegram_bot</span> с удовольствием доставит мне ваше сообщение чтобы мы могли связаться.
+                        </p>
+                        <div class="contact__telegram-icon">
+                            <i class="fa fa-telegram" aria-hidden="true"></i>
                         </div>
-
                     </div>
 
 
@@ -639,6 +688,7 @@
 
         <script src="telegramform/js/telegramform.js"></script>
         <script src="js/about__accordeon.js"></script>
+
 </body>
 
 
