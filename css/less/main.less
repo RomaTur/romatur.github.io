@@ -1080,6 +1080,24 @@ article {
 
 .form__wrapper {
     margin-top: 30px;
+    position: relative;
+}
+
+.overlay{
+    position: absolute;
+    top: 50%;
+    left: 46%;
+    transform: translate(-50%, -50%);
+    width: 93%;
+    height: 100%;
+    font-size: 20px;
+    font-family: ExoTwo,monospace;
+    padding: 80px;
+    background-color: fade(lighten(@color__two, 50%), 70%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200
 }
 
 .contactForm {
@@ -1126,6 +1144,7 @@ article {
     width: 90%;
     box-sizing: border-box;
     font-weight: 100;
+    position: relative;
 }
 
 .form-input__email,
