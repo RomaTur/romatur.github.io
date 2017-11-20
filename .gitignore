@@ -1,6 +1,7 @@
 
 comp.less
-
+alpha
+maket
 TestThreeJS
 boxCodeOriginal
 
@@ -10,3 +11,4 @@ loftschool/Sites/fitness/maket
 
 img/content/projects/*.mp4
 img/content/projects/carousel/*.mp4
+prepros-6.config
