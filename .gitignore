@@ -1,15 +1,7 @@
 
-comp.less
-alpha
+
+src/alpha
+src/alpha/img
 maket/img
-
-TestThreeJS
-boxCodeOriginal
-
-loftschool/Sites/coworking/maket
-loftschool/Sites/airplanet/maket
-loftschool/Sites/fitness/maket
-
-img/content/projects/*.mp4
-img/content/projects/carousel/*.mp4
+node_modules
 prepros-6.config
