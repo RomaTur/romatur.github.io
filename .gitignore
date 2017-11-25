@@ -12,3 +12,5 @@ maket
 alpha
 img/content/projects/*.mp4
 img/content/projects/carousel/*.mp4
+.ftpconfig
+.ftpignore
