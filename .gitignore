@@ -3,3 +3,5 @@
 alpha
 src/maket/img
 node_modules
+.ftpconfig
+.ftpignore
