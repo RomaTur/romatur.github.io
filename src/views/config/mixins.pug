@@ -1,0 +1,5 @@
+mixin socialItem(href, name)
+    li.social__item
+        a.social__link(href= href)
+            svg(class='social__icon social__icon-'+name)
+                use(xlink:href='img/svg/symbols.svg#'+ name)

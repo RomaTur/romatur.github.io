@@ -1,0 +1,19 @@
+block variables
+
+doctype html
+html(lang='ru-RU')
+    head
+        block meta
+        block favicon
+        title #{title}
+        link(rel="stylesheet" href="css/main.css")
+        script(src='js/headerScripts.js')
+        include config/mixins
+    body
+        .wrapper
+            include sections/welcome
+            include sections/about
+
+
+
+    script(src='js/footerScripts.js')
