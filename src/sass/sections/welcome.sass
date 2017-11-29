@@ -1,24 +1,50 @@
 .welcome
     width: 100vw
     height: 100vh
-    // background: rgb(224, 142, 108)
     @extend %flex-center
     @extend %bg-config
     @include bg-img('../img/welcome/macbookFullHD.jpg')
-
-.container
-    @extend %flex-center
-    flex-direction: column
+    background-blend-mode: darken
+    background-color: fade-out($color__theme, 0.1)
+    &__container
+        @extend %flex-center
+        flex-direction: column
 
 .main-text
     @extend %flex-center
     flex-direction: column
+    font-family: 'Exo2', monospace
+
+    color: $color-white
+    margin-bottom: 30px
     &__name
-
+        font-size: 80px
+        font-weight: 200
     &__whoami
-
+        font-size: 30px
+        font-weight: 200
 
 .social
-
-    &__icon-vk
-        fill: white
+    &__list
+        @extend %flex-center
+        flex-direction: row
+    &__item
+        margin: 10px
+        width: 110px
+        height: 110px
+        @extend %flex-center
+    &__link
+        width: 100px
+        height: 100px
+        @extend %flex-center
+        border: 1px solid $color-white
+        border-radius: 50%
+        transition: 0.2s
+        &:hover
+            width: 110px
+            height: 110px
+            
+    &__icon
+        width: 50px
+        height: 50px
+        fill: $color-white

@@ -1,0 +1,85 @@
+.particles-js-canvas-el
+    position: absolute
+    top: 0
+    left: 0
+
+.projects
+    padding: 100px 50px
+    width: 100%
+    position: relative
+    background: darken($color__theme, 40%)
+    &__container
+        @extend %flex-center
+        flex-direction: column
+        max-width: 1200px
+        width: 100%
+        margin: 0 auto
+    &__header
+        text-align: center
+        width: 40%
+        line-height: 80px
+        border-left: 5px solid $color__theme
+        border-bottom: 5px solid $color__theme
+        z-index: 1
+    &__footer
+        width: 40%
+        height: 80px
+        border-left: 5px solid $color__theme
+        border-top: 5px solid $color__theme
+        z-index: 1
+    &__content
+        margin: 100px 0
+        @extend %flex-center
+        flex-direction: column
+        z-index: 1
+    &__row
+        display: -webkit-flex
+        display: -ms-flex
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        margin-bottom: 20px
+        &:last-child
+            margin-bottom: 0
+    &__column
+        display: -webkit-flex
+        display: -ms-flex
+        display: flex
+        flex-direction: column
+        margin-right: 20px
+        &:last-child
+            margin-right: 0
+
+
+
+.project
+    background: #fff
+    border-radius: 2px
+    @extend %bg-config
+    background: #666
+    &-width-1
+        width: 320px
+        height: 180px
+        margin-bottom: 20px
+        &:last-child
+            margin-bottom: 0
+
+    &-width-2
+        width: 600px
+        height: 100%
+    ////////////////
+    &__img
+        width: 100%
+        height: 100%
+    /////////////////
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////

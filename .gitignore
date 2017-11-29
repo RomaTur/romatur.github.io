@@ -1,7 +1,8 @@
 
-
 alpha
 src/maket/img
 node_modules
 .ftpconfig
 .ftpignore
+yarn.lock
+yarn-error.log

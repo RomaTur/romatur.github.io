@@ -1,0 +1,111 @@
+.column
+    &__right
+        width: 60%
+        border-left: 5px solid $color__theme
+        padding-left: 40px
+
+.row
+    margin: 10px 0
+    &__title
+        font-family: 'Exo2', monospace
+        font-size: 20px
+        font-weight: 300
+        font-style: italic
+        background: $color__theme
+        color: $color-white
+        width: 190px
+        line-height: 1.6
+        text-align: center
+.me
+    .row__title
+        margin-left: 10%
+    &__text
+        margin: 20px 0
+        font-family: 'Exo2', monospace
+        &-some
+            font-size: 18px
+            width: 85%
+            font-weight: 200
+            margin-bottom: 20px
+        &-quote
+            margin-left: auto
+            font-size: 16px
+            width: 80%
+            font-style: italic
+            color: $color__theme
+            text-align: right
+
+.univ
+    .row__title
+        margin-right: auto
+    &__container
+        @extend %flex-center
+        justify-content: flex-start
+        width: 100%
+    &__list
+        width: 300px
+        margin-right: 20px
+    &__depart
+        font-family: 'Exo2', monospace
+        font-size: 16px
+        font-weight: 200
+        margin: 20px 0
+    &__img
+        width: 55%
+        max-width: 555px
+
+
+.skills
+    .row__title
+        margin-right: 10%
+        margin-left: auto
+        margin-top: 20px
+    &__container
+        display: -webkit-flex
+        display: -ms-flex
+        display: flex
+        justify-content: space-between
+        width: 100%
+        margin-top: 30px
+    &__student-img
+        width: 200px
+        height: 300px
+        margin-bottom: 200px
+
+    &__accordeon
+        width: 60%
+.accordeon
+
+    &__title
+        text-transform: uppercase
+        font-family: 'Exo2', monospace
+        font-weight: 200
+        font-size: 18px
+        line-height: 1.42
+    &__icon
+        width: 30px
+        height: 30px
+    &__chevron
+        width: 20px
+        height: 20px
+    &__item
+        border-top: 1px solid $color__theme
+        &:last-child
+            border-bottom: 1px solid $color__theme
+        &-head
+            @extend %flex-center
+            flex-direction: row
+            justify-content: space-between
+            padding: 10px 15px
+            cursor: pointer
+        &-content
+            display: none
+            padding: 5px 20px
+        &-cell
+            font-family: 'Exo2', monospace
+            font-weight: 200
+            font-size: 16px
+            line-height: 1.42
+            text-align: center
+            margin: 5px 0
+////////////////////////////////////////////

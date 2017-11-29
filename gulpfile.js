@@ -67,9 +67,12 @@ gulp.task('html-watch',function(){
 });
 
 gulp.task('onlyMove-watch',function(){
-    let img = gulp.src(paths.src + 'img/**/*.{jpg,png,jpeg}')
+    let img = gulp.src([paths.src + 'img/**/*.{jpg,png,jpeg}', paths.src + 'img/about/student.svg'])
             .pipe(plumber())
-            .pipe(imagemin())
+            .pipe(imagemin({
+                progressive:true,
+                interlaced:true
+            }))
             .pipe(gulp.dest(paths.build + 'img/'))
             .pipe(browserSync.reload({stream: true}));
     let fonts = gulp.src(paths.src + 'fonts/**/*.*')
@@ -81,7 +84,7 @@ gulp.task('onlyMove-watch',function(){
     return img , fonts, favicon;
 });
 
-gulp.task('sprites', function () {
+gulp.task('sprites-watch', function () {
     return gulp.src(paths.src+'img/**/*.svg')
         .pipe(svgSprite({mode: "symbols"}))
         // .pipe(svgmin())
@@ -136,7 +139,7 @@ gulp.task('html',function(){
 });
 
 gulp.task('onlyMove',function(){
-    let img = gulp.src(paths.src + 'img/**/*.{jpg,png,jpeg}')
+    let img = gulp.src([paths.src + 'img/**/*.{jpg,png,jpeg}', paths.src + 'img/about/student.svg'])
             .pipe(plumber())
             .pipe(imagemin())
             .pipe(gulp.dest(paths.build + 'img/'));
@@ -145,8 +148,11 @@ gulp.task('onlyMove',function(){
                 .pipe(gulp.dest(paths.build + 'fonts/'));
     let favicon = gulp.src(paths.src + 'favicon.ico')
                 .pipe(plumber())
-                .pipe(gulp.dest(paths.build ));
-    return img , fonts, favicon;
+                .pipe(gulp.dest(paths.build));
+    let json = gulp.src(paths.src + 'js/**/*.json')
+                .pipe(plumber())
+                .pipe(gulp.dest(paths.build+'js/'));
+    return img, fonts, favicon, json;
 });
 
 ////////////////////////////////////
@@ -163,13 +169,14 @@ gulp.task('watch', function(){
     gulp.watch(paths.src + 'sass/**/*.sass', gulp.series('sass-watch'));
     gulp.watch(paths.src + 'js/**/*.js', gulp.series('scripts-watch'));
     gulp.watch(paths.src + 'views/**/*.pug', gulp.series('html-watch'));
-    gulp.watch([paths.src + 'img/**/*.*', paths.src + 'fonts/**/*.*', paths.src + 'favicon.ico'], gulp.series('onlyMove-watch', 'sprites'));
+    gulp.watch([paths.src + 'img/**/*.*', paths.src + 'fonts/**/*.*', paths.src + 'favicon.ico', paths.src + 'js/**/*.json'], gulp.series('onlyMove-watch', 'sprites-watch'));
 });
 
 gulp.task('serve', function() {
     browserSync({
         notify:false,
         open:true,
+        port:8889,
         proxy: "http://localhost:8888/"+paths.project+paths.build
     });
     // browserSync.watch(paths.build + '**/*.*', browserSync.reload({stream: true}));
@@ -177,11 +184,11 @@ gulp.task('serve', function() {
 ///////////////////////////////////////////////////////////
 gulp.task('build', gulp.series(
   'clean',
-  gulp.parallel('sass', 'scripts', 'html', 'onlyMove', 'sprites')
+  gulp.parallel('sass', 'scripts', 'html', 'onlyMove', 'sprites-watch')
 ));
 ////////////////////////////////////////////////////////////
 gulp.task('default', gulp.series(
   'clean',
-  gulp.parallel('sass-watch', 'scripts-watch', 'html-watch', 'onlyMove', 'sprites'),
+  gulp.parallel('sass-watch', 'scripts-watch', 'html-watch', 'onlyMove', 'sprites-watch'),
   gulp.parallel('watch', 'serve')
 ));

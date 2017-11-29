@@ -1,5 +1,29 @@
+mixin svg(classIco, name)
+    svg(class= classIco)
+        use(xlink:href='img/svg/symbols.svg#'+ name)
+
 mixin socialItem(href, name)
     li.social__item
         a.social__link(href= href)
-            svg(class='social__icon social__icon-'+name)
-                use(xlink:href='img/svg/symbols.svg#'+ name)
+            +svg('social__icon', name)
+
+mixin characterItem(text, name)
+    li.character__item
+        span.character__text= text
+        if(name)
+            +svg('character__icon', name)
+
+mixin listItem(text, className)
+    li(class= className)= text
+    
+    
+mixin accordeonItem(text, ico, ...cells)
+    li.accordeon__item
+        .accordeon__item-head
+            +svg('accordeon__icon', ico)
+            span.accordeon__title= text
+            +svg('accordeon__chevron', 'chevron2')
+        ul.accordeon__item-content
+            for cell in cells
+                +listItem(cell, 'accordeon__item-cell')
+        

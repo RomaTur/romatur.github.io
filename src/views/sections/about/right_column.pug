@@ -1,0 +1,32 @@
+.column.column__right
+    .row.me
+        h3.row__title Немного о себе
+        div.me__text
+            .me__text-some Доброго времени суток, меня зовут <span class="text-strong">Роман</span>. Интересуюсь разработкой Web сайтов, Web приложений, приложений для Mac и ПО для микроконтроллеров. Для меня программирование не просто трудовой процесс, а еще творчество и увлечение.
+            
+            .me__text-quote "Большинство хороших программистов делают свою работу не потому, что ожидают оплаты или признания, а потому что получают удовольствие от программирования."
+            
+            .me__text-quote  - Linus Torvalds
+        
+    .row.univ
+        h3.row__title Высшее
+        .univ__content
+            .univ__container
+                ul.univ__list
+                    li.univ__depart Национальный Исследовательский Университет <span class="text-strong">МИЭТ</span> (Московский Институт Электронной Техники)
+                    li.univ__depart Факультет Электроники и Компьютерных Технологий
+                    li.univ__depart Специальность "Информатика и вычислительная техника"
+                img(src='img/about/miet.png' class='univ__img')
+    
+    .row.skills
+        h3.row__title Знания и навыки
+        .skills__content
+            .skills__container
+                img(class='skills__student-img' src='img/student.svg')
+                ul.skills__accordeon
+                    +accordeonItem('Интегральная схемотехника', 'microchip', 'Системы автоматизированного проектирования (Ковчег, MatLab, AutoCad, Multisim, Microwind, Avocad)', 'инженерная графика', 'знание элементной базы, разработка топологии и моделирование работы цифровых схем', 'языки C++, Assembler, VHDL', 'bash, Linux в моделировании схем')
+                    +accordeonItem('Web-программирование', 'code2', 'язык разметки HTML(5)', 'таблицы стилей CSS(3)', 'язык программирования Javascript(+jQuery)', 'MySQL, phpMyAdmin', 'фреймворк Bootstrap, p5.js', 'препроцессоры (sass, less)', 'методология BEM', 'Adobe Photoshop, Avocode', 'Git, Atom (+ Emmet, LiveReload)', 'адаптивная верстка под мобильные устройства')
+                    +accordeonItem('Медиа контент', 'picture', 'Adobe Photoshop, Premiere Pro', 'Опыт работы на телевидении оператором/монтажером ( +частные заказы )')
+                        
+                    
+                    
