@@ -118,12 +118,12 @@ gulp.task('sass', function(){
 gulp.task('scripts', function(){
     let headScripts =  gulp.src(paths.src + 'js/headScripts/*.js')
             .pipe(plumber())
-            .pipe(uglify())
+            // .pipe(uglify())
             .pipe(concat('headScripts.js'))
             .pipe(gulp.dest(paths.build + 'js/'));
     let footerScripts = gulp.src(paths.src+'js/footerScripts/*.js')
             .pipe(plumber())
-            .pipe(uglify())
+            // .pipe(uglify())
             .pipe(concat('footerScripts.js'))
             .pipe(gulp.dest(paths.build + 'js/'));
     return headScripts, footerScripts;
@@ -141,7 +141,10 @@ gulp.task('html',function(){
 gulp.task('onlyMove',function(){
     let img = gulp.src([paths.src + 'img/**/*.{jpg,png,jpeg}', paths.src + 'img/about/student.svg'])
             .pipe(plumber())
-            .pipe(imagemin())
+            .pipe(imagemin({
+                progressive:true,
+                interlaced:true
+            }))
             .pipe(gulp.dest(paths.build + 'img/'));
     let fonts = gulp.src(paths.src + 'fonts/**/*.*')
                 .pipe(plumber())

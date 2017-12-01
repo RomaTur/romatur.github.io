@@ -1,0 +1,17 @@
+.column.column__right
+    h3.contact__idea Возникла идея?
+    h3.contact__needwork Нужен программист для сотрудничества?
+    .contact__telegram
+        .contact__telegram-desc
+            p.contact__telegram-text <span class="bot-text"> Telegram_bot </span>  с удовольствием доставит мне ваше сообщение чтобы мы могли связаться.
+            +svg('telegram-ico', 'telegram')
+        form(id='form-contact' class='contact__telegram-form form-element' action='#' method='post')
+            .form-title
+            .form-message
+            .form__row
+                input(class='form__input' type='text' placeholder='Роман' name='name')
+                input(class='form__input' type='text' placeholder='Email / phone' name='contact')
+            .form__row
+                textarea(class='form__input form__message' name='message' placeholder='Сообщение')
+            .form__row
+                input(class='form__input form__submit' type='submit' value='ОТПРАВИТЬ')

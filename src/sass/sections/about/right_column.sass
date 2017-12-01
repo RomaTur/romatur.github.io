@@ -1,21 +1,11 @@
-.column
-    &__right
-        width: 60%
-        border-left: 5px solid $color__theme
-        padding-left: 40px
+
 
 .row
     margin: 10px 0
     &__title
-        font-family: 'Exo2', monospace
-        font-size: 20px
-        font-weight: 300
-        font-style: italic
-        background: $color__theme
-        color: $color-white
+        @extend %paragraph-title
         width: 190px
-        line-height: 1.6
-        text-align: center
+
 .me
     .row__title
         margin-left: 10%

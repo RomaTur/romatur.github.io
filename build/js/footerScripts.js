@@ -4,9 +4,9 @@ $(function(){
 
     vertAccordInit('accordeon__item', 'accordeon__item-content');
 
-    particlesJS.load('particles-js', 'js/particles-config.json', function() {
-        console.log('callback - particles.js config loaded');
-});
+//     particlesJS.load('particles-js', 'js/particles-config.json', function() {
+//         console.log('callback - particles.js config loaded');
+// });
 });
 
 let insertAgeAfter = (birthday, elemAfter) => { // ('1994-08-08', '.character__text:contains("Возраст: ")')

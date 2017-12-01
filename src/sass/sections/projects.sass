@@ -18,12 +18,14 @@
         text-align: center
         width: 40%
         line-height: 80px
+        @extend %border-radius
         border-left: 5px solid $color__theme
         border-bottom: 5px solid $color__theme
         z-index: 1
     &__footer
         width: 40%
         height: 80px
+        @extend %border-radius
         border-left: 5px solid $color__theme
         border-top: 5px solid $color__theme
         z-index: 1
@@ -54,9 +56,9 @@
 
 .project
     background: #fff
-    border-radius: 2px
+    @extend %border-radius
     @extend %bg-config
-    background: #666
+    background: #999
     &-width-1
         width: 320px
         height: 180px

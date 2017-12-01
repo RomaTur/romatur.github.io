@@ -14,3 +14,22 @@
     background-position: center
     background-size: cover
     // position: relative
+
+%main-text
+    font-family: 'Exo2', monospace
+    font-size: rem(16px)
+    font-weight: 200
+
+%paragraph-title
+    @extend %border-radius
+    @extend %main-text
+    font-size: 20px
+    font-weight: 300
+    font-style: italic
+    background: $color__theme
+    color: $color-white
+    line-height: 1.6
+    text-align: center
+
+%border-radius
+    border-radius: 4px

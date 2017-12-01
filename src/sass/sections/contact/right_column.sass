@@ -1,0 +1,66 @@
+.contact
+    &__idea
+        @extend %main-text
+        width: 50%
+        margin-left: 50%
+        font-size: 20px
+        margin-bottom: 10px
+    &__needwork
+        @extend %main-text
+        width: 100%
+        text-align: right
+        font-size: 25px
+    &__telegram
+        width: 100%
+        &-desc
+            @extend %flex-center
+        &-text
+            @extend %main-text
+            font-size: 20px
+
+        &-form
+            width: 100%
+            display: -webkit-flex
+            display: -ms-flex
+            display: flex
+            flex: 1
+            flex-direction: column
+
+.form
+    &__row
+        @extend %flex-center
+        margin: 10px 0
+    &__input
+        flex: 1
+        margin-right: 10px
+        border: none
+        outline: none
+        border-top: 1px solid $color__theme
+        border-bottom: 1px solid $color__theme
+        background: fade-out($color__theme, 0.9)
+        @extend %main-text
+        font-weight: 300
+        font-size: 18px
+        padding: 15px 15px
+        margin-bottom: 7px
+        &:last-child
+            margin-right: 0
+    &__message
+        resize: none
+        height: 200px
+    &__submit
+        // border-radius: 0
+        border: none
+        background: $color__theme
+        color: $color-white
+
+.bot-text
+    @extend %paragraph-title
+    font-style: normal
+    padding: 2px 2px 2px 5px
+    margin-right: 4px
+
+.telegram-ico
+    width: 70px
+    height: 70px
+    margin: 0 10%

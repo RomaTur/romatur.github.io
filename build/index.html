@@ -37,7 +37,7 @@
       <section class="section about">
         <div class="about__container">
           <div class="column column__left">
-            <h2 class="section__title">Будем Знакомы</h2><img class="about__avatar" src="img/about/me.jpg">
+            <h2 class="section__title">Будем<br>Знакомы</h2><img class="about__avatar" src="img/about/avatar.jpg">
             <ul class="character__list">
                   <li class="character__item"><span class="character__text">Возраст: </span>
                   </li>
@@ -190,7 +190,41 @@
           <div class="projects__footer"></div>
         </div>
       </section>
+      <section class="section contact">
+        <div class="contact__container">
+          <div class="column column__left">
+            <h2 class="section__title">Будем<br>На<br>Связи</h2>
+          </div>
+          <div class="column column__right">
+            <h3 class="contact__idea">Возникла идея?</h3>
+            <h3 class="contact__needwork">Нужен программист для сотрудничества?</h3>
+            <div class="contact__telegram">
+              <div class="contact__telegram-desc">
+                <p class="contact__telegram-text"><span class="bot-text"> Telegram_bot </span>  с удовольствием доставит мне ваше сообщение чтобы мы могли связаться.</p>
+                    <svg class="telegram-ico">
+                      <use xlink:href="img/svg/symbols.svg#telegram"></use>
+                    </svg>
+              </div>
+              <form class="contact__telegram-form form-element" id="form-contact" action="#" method="post">
+                <div class="form-title"></div>
+                <div class="form-message"></div>
+                <div class="form__row">
+                  <input class="form__input" type="text" placeholder="Роман" name="name">
+                  <input class="form__input" type="text" placeholder="Email / phone" name="contact">
+                </div>
+                <div class="form__row">
+                  <textarea class="form__input form__message" name="message" placeholder="Сообщение"></textarea>
+                </div>
+                <div class="form__row">
+                  <input class="form__input form__submit" type="submit" value="ОТПРАВИТЬ">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   </body>
+  <script src="telegramform/js/telegramform.js"></script>
   <script src="js/footerScripts.js"></script>
 </html>
