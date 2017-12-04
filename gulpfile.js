@@ -81,7 +81,10 @@ gulp.task('onlyMove-watch',function(){
     let favicon = gulp.src(paths.src + 'favicon.ico')
                 .pipe(plumber())
                 .pipe(gulp.dest(paths.build ));
-    return img , fonts, favicon;
+    let php = gulp.src(paths.src + 'php/**/*.php')
+                .pipe(plumber())
+                .pipe(gulp.dest(paths.build + 'php/'));
+    return img , fonts, favicon, php;
 });
 
 gulp.task('sprites-watch', function () {
@@ -155,7 +158,10 @@ gulp.task('onlyMove',function(){
     let json = gulp.src(paths.src + 'js/**/*.json')
                 .pipe(plumber())
                 .pipe(gulp.dest(paths.build+'js/'));
-    return img, fonts, favicon, json;
+    let php = gulp.src(paths.src + 'php/**/*.php')
+                .pipe(plumber())
+                .pipe(gulp.dest(paths.build + 'php/'));
+    return img , fonts, favicon, php;
 });
 
 ////////////////////////////////////

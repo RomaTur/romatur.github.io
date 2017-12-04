@@ -53,14 +53,28 @@
         border: none
         background: $color__theme
         color: $color-white
+        transition: 0.2s
+        &:hover
+            background: darken($color__theme, 5%)
+    &__modal
+        display: none
+        padding: 20px
+        background: $color-white
+        @extend %border-radius
+
+
+
+
 
 .bot-text
     @extend %paragraph-title
     font-style: normal
-    padding: 2px 2px 2px 5px
+    padding: 2px 2px 4px 6px
     margin-right: 4px
 
-.telegram-ico
-    width: 70px
-    height: 70px
-    margin: 0 10%
+.telegram
+    &-ico
+        width: 70px
+        height: 70px
+        margin: 0 10%
+        fill: $color__theme

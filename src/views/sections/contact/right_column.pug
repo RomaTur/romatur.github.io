@@ -5,9 +5,9 @@
         .contact__telegram-desc
             p.contact__telegram-text <span class="bot-text"> Telegram_bot </span>  с удовольствием доставит мне ваше сообщение чтобы мы могли связаться.
             +svg('telegram-ico', 'telegram')
-        form(id='form-contact' class='contact__telegram-form form-element' action='#' method='post')
-            .form-title
-            .form-message
+        form(id='form-contact' class='contact__telegram-form form-element' action='./php/send-message-to-telegram.php' method='post')
+            //- .form-title
+            .form__modal
             .form__row
                 input(class='form__input' type='text' placeholder='Роман' name='name')
                 input(class='form__input' type='text' placeholder='Email / phone' name='contact')

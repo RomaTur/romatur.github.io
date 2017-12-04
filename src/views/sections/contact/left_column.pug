@@ -1,3 +1,14 @@
 .column.column__left
     h2.section__title Будем<br>На<br>Связи
-    
+    ul.contact__list
+        li.contact__item
+            a(class='contact__link' href='tel:89152208197') +7-915-220-8197
+            +svg('contact__ico', 'smartphone')
+        li.contact__item
+            a(class='contact__link' href='mailto:mr.romatur@gmail.com') mr.romatur@gmail.com
+            +svg('contact__ico', 'mail')
+        li.contact__item
+            a(class='contact__link' href='#' id="mapButton") RUSSIA, SAROV
+                #map
+            +svg('contact__ico', 'marker')
+            

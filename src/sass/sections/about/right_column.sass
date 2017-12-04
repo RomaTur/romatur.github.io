@@ -59,8 +59,8 @@
         margin-top: 30px
     &__student-img
         width: 200px
-        height: 300px
-        margin-bottom: 200px
+        height: 400px
+        margin-bottom: 100px
 
     &__accordeon
         width: 60%
@@ -72,12 +72,14 @@
         font-weight: 200
         font-size: 18px
         line-height: 1.42
+        text-align: center
     &__icon
         width: 30px
         height: 30px
     &__chevron
         width: 20px
         height: 20px
+        transition: 0.4s
     &__item
         border-top: 1px solid $color__theme
         &:last-child
@@ -98,4 +100,7 @@
             line-height: 1.42
             text-align: center
             margin: 5px 0
+        &--active
+            .accordeon__chevron
+                transform: scale(1,-1)
 ////////////////////////////////////////////

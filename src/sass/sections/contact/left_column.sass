@@ -1,0 +1,21 @@
+.contact
+    &__list
+        margin-top: 100px
+    &__item
+        margin-bottom: 20px
+        @extend %flex-center
+        justify-content: flex-end
+    &__link
+        @extend %main-text
+        font-size: 18px
+        font-weight: 300
+        color: darken($color__theme, 5%)
+        border-bottom: 1px dashed $color__theme
+        transition: 0.2s
+        &:hover
+            color: darken($color__theme, 30%)
+    &__ico
+            width: 23px
+            height: 23px
+            margin-left: 10px
+            fill: darken($color__theme, 5%)

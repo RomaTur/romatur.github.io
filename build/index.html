@@ -170,7 +170,7 @@
           <div class="projects__content">
             <div class="projects__row">
               <div class="projects__column">
-                <div class="project project-width-2"><img class="project__img" src="img/welcome/macbookFullHD.jpg"></div>
+                <div class="project project-width-2"></div>
               </div>
               <div class="project__column">
                 <div class="project project-width-1"></div>
@@ -194,6 +194,24 @@
         <div class="contact__container">
           <div class="column column__left">
             <h2 class="section__title">Будем<br>На<br>Связи</h2>
+            <ul class="contact__list">
+              <li class="contact__item"><a class="contact__link" href="tel:89152208197">+7-915-220-8197</a>
+                    <svg class="contact__ico">
+                      <use xlink:href="img/svg/symbols.svg#smartphone"></use>
+                    </svg>
+              </li>
+              <li class="contact__item"><a class="contact__link" href="mailto:mr.romatur@gmail.com">mr.romatur@gmail.com</a>
+                    <svg class="contact__ico">
+                      <use xlink:href="img/svg/symbols.svg#mail"></use>
+                    </svg>
+              </li>
+              <li class="contact__item"><a class="contact__link" href="#" id="mapButton">RUSSIA, SAROV
+                  <div id="map"></div></a>
+                    <svg class="contact__ico">
+                      <use xlink:href="img/svg/symbols.svg#marker"></use>
+                    </svg>
+              </li>
+            </ul>
           </div>
           <div class="column column__right">
             <h3 class="contact__idea">Возникла идея?</h3>
@@ -205,9 +223,8 @@
                       <use xlink:href="img/svg/symbols.svg#telegram"></use>
                     </svg>
               </div>
-              <form class="contact__telegram-form form-element" id="form-contact" action="#" method="post">
-                <div class="form-title"></div>
-                <div class="form-message"></div>
+              <form class="contact__telegram-form form-element" id="form-contact" action="./php/send-message-to-telegram.php" method="post">
+                <div class="form__modal"></div>
                 <div class="form__row">
                   <input class="form__input" type="text" placeholder="Роман" name="name">
                   <input class="form__input" type="text" placeholder="Email / phone" name="contact">
@@ -225,6 +242,5 @@
       </section>
     </div>
   </body>
-  <script src="telegramform/js/telegramform.js"></script>
   <script src="js/footerScripts.js"></script>
 </html>

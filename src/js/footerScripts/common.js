@@ -1,13 +1,39 @@
+
+
 $(function(){
 
     insertAgeAfter('1994-08-08', '.character__text:contains("Возраст: ")');
 
     vertAccordInit('accordeon__item', 'accordeon__item-content');
 
-//     particlesJS.load('particles-js', 'js/particles-config.json', function() {
-//         console.log('callback - particles.js config loaded');
-// });
+    //     particlesJS.load('particles-js', 'js/particles-config.json', function() {
+    //         console.log('callback - particles.js config loaded');
+    // });
+
+    ymaps.ready(init);
+    var myMap;
+
+    function init(){
+        myMap = new ymaps.Map("map", {
+            center: [54.922788, 43.344844],
+            zoom: 12
+        });
+    }
+
+    let mapDiv = $('#map');
+    let mapButton = mapDiv.parent();
+    mapButton.on('click', function(event){
+        event.preventDefault();
+        mapDiv.bPopup({
+            scrollBar:false,
+            onClose: function(){
+                mapDiv.appendTo(mapButton);
+            }
+        });
+    });
+
 });
+
 
 let insertAgeAfter = (birthday, elemAfter) => { // ('1994-08-08', '.character__text:contains("Возраст: ")')
     function declOfNum(number, titles) {
@@ -25,7 +51,7 @@ let insertAgeAfter = (birthday, elemAfter) => { // ('1994-08-08', '.character__t
     $('<span id="myAge">'+myAge+'</span>').insertAfter(ageText);
 };
 
-var vertAccordInit = (accordeonItem, accordeonItemContent) => {
+let vertAccordInit = (accordeonItem, accordeonItemContent) => {
 $('.'+accordeonItem).click(function(event) {
     let targetItem = $(event.target).parents('.'+accordeonItem);
     if (!targetItem.hasClass(accordeonItem + '--active')) {
@@ -38,3 +64,34 @@ $('.'+accordeonItem).click(function(event) {
     }
 });
 }
+
+let funcAfterTelegramForm = (state, data, modalMessage, messageParent) =>{
+
+    if(state){
+        // Вывод сообщения об успешной отправке
+        modalMessage.html(data);
+        messageParent[0].reset();
+        modalMessage.bPopup({
+            modalClose: false,
+            autoClose: 1500,
+            scrollBar:false,
+            onClose: function(){
+                modalMessage.appendTo(messageParent);
+            }
+        });
+    }
+    else{
+        modalMessage.html(data);
+        modalMessage.bPopup({
+            modalClose: false,
+            autoClose: 1500,
+            scrollBar:false,
+            onClose: function(){
+                modalMessage.appendTo(messageParent);
+            }
+        });
+    }
+
+
+};
+////////////////////////////////
