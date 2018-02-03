@@ -1,8 +1,4 @@
-# Site-Portfolio
+>В разработке
 
-            I'm developing this stuff
-                please wait...
-                
-[romatur.xyz][9c9db2ab]
+## *Сайт-визитка*
 
-  [9c9db2ab]: http://romatur.xyz "My Site"
